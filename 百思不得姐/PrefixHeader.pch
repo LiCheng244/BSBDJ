@@ -1,0 +1,16 @@
+
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by LiCheng on 2016/11/1.
+//  Copyright © 2016年 Li_Cheng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+BSFrame.h"
+
+
+#endif /* PrefixHeader_pch */
