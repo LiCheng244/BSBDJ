@@ -19,6 +19,7 @@
 		5A5CC1541DC78EAB00C96343 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5CC1531DC78EAB00C96343 /* _____Tests.m */; };
 		5A5CC15F1DC78EAB00C96343 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5CC15E1DC78EAB00C96343 /* _____UITests.m */; };
 		5A71A3561DC8256A00A6B6DE /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71A3551DC8256A00A6B6DE /* BSTabBarController.m */; };
+		5AC04CFA1DCA332200487E62 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC04CF91DCA332200487E62 /* UIBarButtonItem+BSExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		5A5CC1601DC78EAB00C96343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A71A3541DC8256A00A6B6DE /* BSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarController.h; sourceTree = "<group>"; };
 		5A71A3551DC8256A00A6B6DE /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
+		5AC04CF81DCA332200487E62 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
+		5AC04CF91DCA332200487E62 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				5A04D0C21DC8D4D8009840A8 /* BSMeViewController.m */,
 				5A04D0C71DC8E159009840A8 /* UIView+BSFrame.h */,
 				5A04D0C81DC8E159009840A8 /* UIView+BSFrame.m */,
+				5AC04CF81DCA332200487E62 /* UIBarButtonItem+BSExtension.h */,
+				5AC04CF91DCA332200487E62 /* UIBarButtonItem+BSExtension.m */,
 				5A5CC1391DC78EAB00C96343 /* Supporting Files */,
 				5A04D0CA1DC8E258009840A8 /* PrefixHeader.pch */,
 			);
@@ -302,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A04D0C91DC8E159009840A8 /* UIView+BSFrame.m in Sources */,
+				5AC04CFA1DCA332200487E62 /* UIBarButtonItem+BSExtension.m in Sources */,
 				5A5CC13E1DC78EAB00C96343 /* AppDelegate.m in Sources */,
 				5A04D0C01DC8D4CF009840A8 /* BSFriendTrendsViewController.m in Sources */,
 				5A04D0C31DC8D4D8009840A8 /* BSMeViewController.m in Sources */,

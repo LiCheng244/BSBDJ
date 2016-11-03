@@ -31,6 +31,8 @@
         [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"]
                     forState:(UIControlStateHighlighted)];
 
+        publishBtn.size = publishBtn.currentImage.size;
+
         [self addSubview:publishBtn];
         
         self.publishBtn = publishBtn;
@@ -45,9 +47,7 @@
     
     [super layoutSubviews];
     
-    // 设置发布按钮的frame
-    self.publishBtn.width  = self.publishBtn.currentImage.size.width;
-    self.publishBtn.height = self.publishBtn.currentImage.size.height;
+    // 设置发布按钮的位置
     self.publishBtn.center = CGPointMake(self.width * 0.5, self.height * 0.5);
 
     // 设置其他按钮的frame

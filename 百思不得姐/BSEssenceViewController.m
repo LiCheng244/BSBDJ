@@ -16,7 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 设置导航栏标题
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    
+    // 设置导航栏左按钮
+    UIBarButtonItem *leftBtn = [UIBarButtonItem itemWithImage:@"MainTagSubIcon"
+                                                    highImage:@"MainTagSubIconClick"
+                                                       target:self
+                                                       action:@selector(leftClick)];
+    self.navigationItem.leftBarButtonItem = leftBtn;
+    
+    self.view.backgroundColor = [UIColor redColor];
+   
 }
 
+/**
+ *  左按钮点击事件
+ */
+- (void)leftClick {
+    
+    NSLog(@"111");
+}
 
 @end

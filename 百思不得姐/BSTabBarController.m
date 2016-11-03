@@ -72,9 +72,8 @@
     [self setValue:tabBar forKey:@"tabBar"];
     /**
         由于 tabBar 的属性是不可以修改的, 所以使用kvc对tabBar这个成员变量进行赋值
+        当属性为 readonly 时 , 可以使用kvc来进行修改赋值
      */
-    
-    
 }
 
 /**
@@ -93,6 +92,9 @@
     vc.tabBarItem.title         = title;
     vc.tabBarItem.image         = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImage];
-    [self addChildViewController:vc];
+    
+    // 包装导航栏控制, 并设置将其设置为tabBarContrller的子控制器
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self addChildViewController:nav];
 }
 @end
