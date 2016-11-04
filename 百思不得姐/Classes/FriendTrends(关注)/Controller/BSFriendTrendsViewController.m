@@ -32,8 +32,8 @@
                                                           action:@selector(friendsClick)];
     self.navigationItem.leftBarButtonItem = friendsBtn;
     
-    self.view.backgroundColor = [UIColor brownColor];
-
+    // 设置背景颜色
+    self.view.backgroundColor = BSGlobalColor;
 }
 
 - (void)friendsClick {

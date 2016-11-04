@@ -13,6 +13,7 @@
 #import "BSFriendTrendsViewController.h"
 #import "BSMeViewController.h"
 #import "BSTabBar.h"
+#import "BSNavigationController.h"
 
 @interface BSTabBarController ()
 
@@ -93,8 +94,17 @@
     vc.tabBarItem.image         = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImage];
     
+//    vc.view.backgroundColor = [UIColor redColor];
+    /**
+     *  不要在这里设置背景色: 
+     *      因为:在这里设置的话, 程序启动后会将四个控制器一次性都创建完毕 (因为 调用了self.view)
+     *
+     *  要做到每次点击下面tabBar时, 再创建控制器
+     */
+    
+    
     // 包装导航栏控制, 并设置将其设置为tabBarContrller的子控制器
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    BSNavigationController *nav = [[BSNavigationController alloc] initWithRootViewController:vc];
     [self addChildViewController:nav];
 }
 @end

@@ -26,5 +26,11 @@
 // 打印函数
 #define BSLogFunc BSLog(@"%s", __func__)
 
+// RGB颜色
+#define BSRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+// 全局背景色
+
+#define BSGlobalColor BSRGBColor(223, 223, 223)
 
 #endif /* PrefixHeader_pch */

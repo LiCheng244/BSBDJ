@@ -1,18 +1,18 @@
 //
-//  BSNewViewController.m
+//  BSEssenceViewController.m
 //  百思不得姐
 //
 //  Created by LiCheng on 2016/11/1.
 //  Copyright © 2016年 Li_Cheng. All rights reserved.
 //
 
-#import "BSNewViewController.h"
+#import "BSEssenceViewController.h"
 
-@interface BSNewViewController ()
+@interface BSEssenceViewController ()
 
 @end
 
-@implementation BSNewViewController
+@implementation BSEssenceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +27,8 @@
                                                        action:@selector(leftClick)];
     self.navigationItem.leftBarButtonItem = leftBtn;
     
-    self.view.backgroundColor = [UIColor yellowColor];
+    // 设置背景颜色
+    self.view.backgroundColor = BSGlobalColor;
 }
 
 /**
@@ -35,7 +36,9 @@
  */
 - (void)leftClick {
     
-    BSLog(@"%s", __func__);
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

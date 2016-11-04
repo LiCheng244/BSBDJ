@@ -36,6 +36,9 @@
      *  右按钮添加: 从右开始添加
      *  左按钮添加: 从左开始添加
      */
+    
+    // 设置背景颜色
+    self.view.backgroundColor = BSGlobalColor;
 }
 
 - (void)nightModeClick {
