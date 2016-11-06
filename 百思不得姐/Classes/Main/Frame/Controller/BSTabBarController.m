@@ -21,28 +21,29 @@
 
 @implementation BSTabBarController
 
-
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
++ (void)initialize{
     
     // 1. 通过 appearance 统一设置所有tabbaritem的文字属性
     NSMutableDictionary *attr                  = [NSMutableDictionary dictionary];
     attr[NSFontAttributeName]                  = [UIFont systemFontOfSize:11];
     attr[NSForegroundColorAttributeName]       = [UIColor grayColor];
-
+    
     NSMutableDictionary *selectAttr            = [NSMutableDictionary dictionary];
     selectAttr[NSFontAttributeName]            = attr[NSFontAttributeName];
     selectAttr[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-
+    
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attr forState:(UIControlStateNormal)];
     [item setTitleTextAttributes:selectAttr forState:(UIControlStateSelected)];
     /**
-        pai中 后面带有 UI_APPEARANCE_SELECTOR 的方法, 都可以通过 appearance 来统一设置属性
+     pai中 后面带有 UI_APPEARANCE_SELECTOR 的方法, 都可以通过 appearance 来统一设置属性
      */
+}
 
-
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
     // 2. 添加子控制器
     BSEssenceViewController *essenceVC     = [[BSEssenceViewController alloc] init];
     [self setupChildVC:essenceVC

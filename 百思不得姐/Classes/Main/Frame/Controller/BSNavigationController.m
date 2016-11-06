@@ -10,7 +10,10 @@
 
 @implementation BSNavigationController
 
-- (void)viewDidLoad{
+/**
+ *  当第一次使用该类时, 会调用该方法
+ */
++ (void)initialize{
     
     // 设置导航栏背景图片
     UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
@@ -19,9 +22,18 @@
      *
      *  该方法是设置, 当导航栏包含在当前控制器下才会 设置下面的背景图片, 其他的话不会设置
      */
-                            
+    
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]
               forBarMetrics:(UIBarMetricsDefault)];
+}
+
+- (void)viewDidLoad{
+    
+    /**
+     *      导航栏的设置 最好不要写在该方法中
+     *
+     *  因为程序启动时viewDidLoad会调用四次, 相当于设置了四次.
+     */
 }
 
 
@@ -39,6 +51,7 @@
         // 设置文字
         [backBtn setTitle:@"返回"
                  forState:(UIControlStateNormal)];
+        backBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         [backBtn setTitleColor:[UIColor blackColor]
                       forState:(UIControlStateNormal)];
         [backBtn setTitleColor:[UIColor redColor]
@@ -53,7 +66,7 @@
                     action:@selector(backClick)
           forControlEvents:(UIControlEventTouchUpInside)];
         
-        backBtn.size = CGSizeMake(70, 30);
+        backBtn.size = CGSizeMake(70, 25);
         
         // contentHorizontalAlignment: 让按钮内部所有内容左对齐
         backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
