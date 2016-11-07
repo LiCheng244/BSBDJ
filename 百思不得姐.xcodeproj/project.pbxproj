@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A989566DF97D5E98F4B7DD3 /* Pods______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B9EC4F795FC95F503F9D7B /* Pods______.framework */; };
+		5A1D9A301DCF01FE002A5F59 /* BSRecommendUsersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D9A2E1DCF01FE002A5F59 /* BSRecommendUsersCell.m */; };
+		5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1D9A2F1DCF01FE002A5F59 /* BSRecommendUsersCell.xib */; };
+		5A1D9A341DCF0428002A5F59 /* BSRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D9A331DCF0428002A5F59 /* BSRecommendUser.m */; };
 		5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */; };
 		5A76642D1DCC31C00040DB19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A76642C1DCC31C00040DB19 /* main.m */; };
 		5A7664381DCC31C00040DB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7664371DCC31C00040DB19 /* Assets.xcassets */; };
@@ -49,6 +52,11 @@
 
 /* Begin PBXFileReference section */
 		13B176E6E8066461F7EF6C0E /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
+		5A1D9A2D1DCF01FE002A5F59 /* BSRecommendUsersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendUsersCell.h; sourceTree = "<group>"; };
+		5A1D9A2E1DCF01FE002A5F59 /* BSRecommendUsersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendUsersCell.m; sourceTree = "<group>"; };
+		5A1D9A2F1DCF01FE002A5F59 /* BSRecommendUsersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendUsersCell.xib; sourceTree = "<group>"; };
+		5A1D9A321DCF0428002A5F59 /* BSRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendUser.h; sourceTree = "<group>"; };
+		5A1D9A331DCF0428002A5F59 /* BSRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendUser.m; sourceTree = "<group>"; };
 		5A62E6CE1DCC648A00FAFBC5 /* note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = note.h; sourceTree = "<group>"; };
 		5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		5A7664281DCC31C00040DB19 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +279,8 @@
 			children = (
 				5A8B4F721DCC8397009DFC50 /* BSRecommendCategory.h */,
 				5A8B4F731DCC8397009DFC50 /* BSRecommendCategory.m */,
+				5A1D9A321DCF0428002A5F59 /* BSRecommendUser.h */,
+				5A1D9A331DCF0428002A5F59 /* BSRecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +291,9 @@
 				5A8B4F7D1DCC8601009DFC50 /* BSRecommendCategoryCell.h */,
 				5A8B4F7E1DCC8601009DFC50 /* BSRecommendCategoryCell.m */,
 				5A8B4F7F1DCC8601009DFC50 /* BSRecommendCategoryCell.xib */,
+				5A1D9A2D1DCF01FE002A5F59 /* BSRecommendUsersCell.h */,
+				5A1D9A2E1DCF01FE002A5F59 /* BSRecommendUsersCell.m */,
+				5A1D9A2F1DCF01FE002A5F59 /* BSRecommendUsersCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,6 +532,7 @@
 				5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */,
 				5A8B4F811DCC8601009DFC50 /* BSRecommendCategoryCell.xib in Resources */,
 				5A8B4F711DCC797B009DFC50 /* BSRecommendViewController.xib in Resources */,
+				5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */,
 				5A7664381DCC31C00040DB19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +608,7 @@
 			files = (
 				5A8B4F741DCC8397009DFC50 /* BSRecommendCategory.m in Sources */,
 				5A8B4F801DCC8601009DFC50 /* BSRecommendCategoryCell.m in Sources */,
+				5A1D9A301DCF01FE002A5F59 /* BSRecommendUsersCell.m in Sources */,
 				5A8B4F701DCC797B009DFC50 /* BSRecommendViewController.m in Sources */,
 				5A7664901DCC34E10040DB19 /* AppDelegate.m in Sources */,
 				5A76648E1DCC34E10040DB19 /* BSEssenceViewController.m in Sources */,
@@ -601,6 +616,7 @@
 				5A7664921DCC34E10040DB19 /* BSTabBarController.m in Sources */,
 				5A7664941DCC34E10040DB19 /* UIBarButtonItem+BSExtension.m in Sources */,
 				5A7664961DCC34E10040DB19 /* BSNewViewController.m in Sources */,
+				5A1D9A341DCF0428002A5F59 /* BSRecommendUser.m in Sources */,
 				5A76648F1DCC34E10040DB19 /* BSFriendTrendsViewController.m in Sources */,
 				5A7664931DCC34E10040DB19 /* BSTabBar.m in Sources */,
 				5A76642D1DCC31C00040DB19 /* main.m in Sources */,

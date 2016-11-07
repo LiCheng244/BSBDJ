@@ -26,16 +26,15 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backgroundColor = BSRGBColor(244, 244, 244);
+    
+    /**
+     *  当cell的selection 被设置为 none 时:
+     *
+     *  cell 中的所有子控件 都不会进入高亮状态; 但是点击事件会存在
+     *  即使在 该方法中通过代码设置 cell 的选中样式没有效果
+     */
 }
 
-- (void)layoutSubviews{
-    
-    [super layoutSubviews];
-    
-    // 重新调整内部textLabel 的frame
-    self.textLabel.y = 2;
-    self.textLabel.height = self.contentView.height - 2 * self.textLabel.y;
-}
 
 -(void)setCategory:(BSRecommendCategory *)category{
     
@@ -43,6 +42,24 @@
     self.textLabel.text = category.name;
 }
 
+
+- (void)layoutSubviews{
+    
+    [super layoutSubviews];
+    
+    // 重新调整内部textLabel 的frame(不要挡住自定义的底部白线)
+    self.textLabel.y = 2;
+    self.textLabel.height = self.contentView.height - 2 * self.textLabel.y;
+}
+
+
+/**
+ *  可以在该方法中监听cell的选中和未选中状态
+ *
+ *  如果要修改cell被选中的状态可以再该方法中进行修改
+ *
+ *  @param selected 值为YES 代表选中
+ */
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated{
     
     [super setSelected:selected animated:animated];

@@ -17,4 +17,7 @@
 
 @property (nonatomic, copy) NSString *name;
 
+
+/** 存储当前类别中的用户数据 */
+@property (nonatomic, strong) NSMutableArray *users;
 @end
