@@ -14,6 +14,9 @@
 
 @implementation BSRecommendCategory
 
+/**
+ *  懒加载用户数组
+ */
 -(NSMutableArray *)users{
     if (!_users) {
         _users = [NSMutableArray array];

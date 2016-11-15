@@ -36,6 +36,9 @@
 }
 
 
+/**
+ *  赋值
+ */
 -(void)setCategory:(BSRecommendCategory *)category{
     
     _category = category;
@@ -65,8 +68,8 @@
     [super setSelected:selected animated:animated];
     
     self.leftSelectView.hidden = !selected;
-    self.textLabel.textColor = !selected ? BSRGBColor(78, 78, 78) : BSRGBColor(219, 21, 26);
-
+    self.textLabel.textColor   = !selected ? BSRGBColor(78, 78, 78) : BSRGBColor(219, 21, 26);
+    self.backgroundColor       = !selected ? BSGlobalColor : BSRGBColor(255, 255, 255);
 }
 
 @end

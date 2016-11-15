@@ -11,6 +11,7 @@
 		5A1D9A301DCF01FE002A5F59 /* BSRecommendUsersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D9A2E1DCF01FE002A5F59 /* BSRecommendUsersCell.m */; };
 		5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1D9A2F1DCF01FE002A5F59 /* BSRecommendUsersCell.xib */; };
 		5A1D9A341DCF0428002A5F59 /* BSRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D9A331DCF0428002A5F59 /* BSRecommendUser.m */; };
+		5A4451501DDAAE04003689B6 /* BSLoginTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44514F1DDAAE04003689B6 /* BSLoginTextFiled.m */; };
 		5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */; };
 		5A76642D1DCC31C00040DB19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A76642C1DCC31C00040DB19 /* main.m */; };
 		5A7664381DCC31C00040DB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7664371DCC31C00040DB19 /* Assets.xcassets */; };
@@ -26,6 +27,13 @@
 		5A7664951DCC34E10040DB19 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7664811DCC34E10040DB19 /* BSMeViewController.m */; };
 		5A7664961DCC34E10040DB19 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7664871DCC34E10040DB19 /* BSNewViewController.m */; };
 		5A7664971DCC34E10040DB19 /* UIView+BSFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A76648D1DCC34E10040DB19 /* UIView+BSFrame.m */; };
+		5A86B7521DD95D000061E14A /* BSRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A86B7511DD95D000061E14A /* BSRecommendTagsViewController.m */; };
+		5A8AB1CB1DD95FE3007E3E90 /* BSRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8AB1CA1DD95FE3007E3E90 /* BSRecommendTag.m */; };
+		5A8AB1D21DD9617A007E3E90 /* BSRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8AB1D01DD9617A007E3E90 /* BSRecommendTagCell.m */; };
+		5A8AB1D31DD9617A007E3E90 /* BSRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8AB1D11DD9617A007E3E90 /* BSRecommendTagCell.xib */; };
+		5A8AB1DB1DD98DA6007E3E90 /* BSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8AB1D91DD98DA6007E3E90 /* BSLoginRegisterViewController.m */; };
+		5A8AB1DC1DD98DA6007E3E90 /* BSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8AB1DA1DD98DA6007E3E90 /* BSLoginRegisterViewController.xib */; };
+		5A8AB1DF1DD99B07007E3E90 /* BSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8AB1DE1DD99B07007E3E90 /* BSVerticalButton.m */; };
 		5A8B4F701DCC797B009DFC50 /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B4F6E1DCC797B009DFC50 /* BSRecommendViewController.m */; };
 		5A8B4F711DCC797B009DFC50 /* BSRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8B4F6F1DCC797B009DFC50 /* BSRecommendViewController.xib */; };
 		5A8B4F741DCC8397009DFC50 /* BSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B4F731DCC8397009DFC50 /* BSRecommendCategory.m */; };
@@ -57,6 +65,8 @@
 		5A1D9A2F1DCF01FE002A5F59 /* BSRecommendUsersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendUsersCell.xib; sourceTree = "<group>"; };
 		5A1D9A321DCF0428002A5F59 /* BSRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendUser.h; sourceTree = "<group>"; };
 		5A1D9A331DCF0428002A5F59 /* BSRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendUser.m; sourceTree = "<group>"; };
+		5A44514E1DDAAE04003689B6 /* BSLoginTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginTextFiled.h; sourceTree = "<group>"; };
+		5A44514F1DDAAE04003689B6 /* BSLoginTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginTextFiled.m; sourceTree = "<group>"; };
 		5A62E6CE1DCC648A00FAFBC5 /* note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = note.h; sourceTree = "<group>"; };
 		5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		5A7664281DCC31C00040DB19 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +100,18 @@
 		5A7664871DCC34E10040DB19 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
 		5A76648C1DCC34E10040DB19 /* UIView+BSFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSFrame.h"; sourceTree = "<group>"; };
 		5A76648D1DCC34E10040DB19 /* UIView+BSFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSFrame.m"; sourceTree = "<group>"; };
+		5A86B7501DD95D000061E14A /* BSRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTagsViewController.h; sourceTree = "<group>"; };
+		5A86B7511DD95D000061E14A /* BSRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTagsViewController.m; sourceTree = "<group>"; };
+		5A8AB1C91DD95FE3007E3E90 /* BSRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTag.h; sourceTree = "<group>"; };
+		5A8AB1CA1DD95FE3007E3E90 /* BSRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTag.m; sourceTree = "<group>"; };
+		5A8AB1CF1DD9617A007E3E90 /* BSRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTagCell.h; sourceTree = "<group>"; };
+		5A8AB1D01DD9617A007E3E90 /* BSRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTagCell.m; sourceTree = "<group>"; };
+		5A8AB1D11DD9617A007E3E90 /* BSRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendTagCell.xib; sourceTree = "<group>"; };
+		5A8AB1D81DD98DA6007E3E90 /* BSLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterViewController.h; sourceTree = "<group>"; };
+		5A8AB1D91DD98DA6007E3E90 /* BSLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterViewController.m; sourceTree = "<group>"; };
+		5A8AB1DA1DD98DA6007E3E90 /* BSLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		5A8AB1DD1DD99B07007E3E90 /* BSVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVerticalButton.h; sourceTree = "<group>"; };
+		5A8AB1DE1DD99B07007E3E90 /* BSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVerticalButton.m; sourceTree = "<group>"; };
 		5A8B4F6D1DCC797B009DFC50 /* BSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendViewController.h; sourceTree = "<group>"; };
 		5A8B4F6E1DCC797B009DFC50 /* BSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendViewController.m; sourceTree = "<group>"; };
 		5A8B4F6F1DCC797B009DFC50 /* BSRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendViewController.xib; sourceTree = "<group>"; };
@@ -213,6 +235,7 @@
 				5A7664841DCC34E10040DB19 /* New(新帖) */,
 				5A7664691DCC34E10040DB19 /* FriendTrends(关注) */,
 				5A76647E1DCC34E10040DB19 /* Me(我) */,
+				5A8AB1D41DD98D7F007E3E90 /* Login(登录) */,
 				5A76648A1DCC34E10040DB19 /* Other(其他) */,
 			);
 			path = Classes;
@@ -233,6 +256,8 @@
 			children = (
 				5A7664651DCC34E10040DB19 /* BSEssenceViewController.h */,
 				5A7664661DCC34E10040DB19 /* BSEssenceViewController.m */,
+				5A86B7501DD95D000061E14A /* BSRecommendTagsViewController.h */,
+				5A86B7511DD95D000061E14A /* BSRecommendTagsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +265,8 @@
 		5A7664671DCC34E10040DB19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5A8AB1C91DD95FE3007E3E90 /* BSRecommendTag.h */,
+				5A8AB1CA1DD95FE3007E3E90 /* BSRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +274,9 @@
 		5A7664681DCC34E10040DB19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A8AB1CF1DD9617A007E3E90 /* BSRecommendTagCell.h */,
+				5A8AB1D01DD9617A007E3E90 /* BSRecommendTagCell.m */,
+				5A8AB1D11DD9617A007E3E90 /* BSRecommendTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -423,6 +453,44 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		5A8AB1D41DD98D7F007E3E90 /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				5A8AB1D51DD98D7F007E3E90 /* Controller */,
+				5A8AB1D61DD98D7F007E3E90 /* Model */,
+				5A8AB1D71DD98D7F007E3E90 /* View */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		5A8AB1D51DD98D7F007E3E90 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A8AB1D81DD98DA6007E3E90 /* BSLoginRegisterViewController.h */,
+				5A8AB1D91DD98DA6007E3E90 /* BSLoginRegisterViewController.m */,
+				5A8AB1DA1DD98DA6007E3E90 /* BSLoginRegisterViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5A8AB1D61DD98D7F007E3E90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5A8AB1D71DD98D7F007E3E90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A8AB1DD1DD99B07007E3E90 /* BSVerticalButton.h */,
+				5A8AB1DE1DD99B07007E3E90 /* BSVerticalButton.m */,
+				5A44514E1DDAAE04003689B6 /* BSLoginTextFiled.h */,
+				5A44514F1DDAAE04003689B6 /* BSLoginTextFiled.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -488,18 +556,21 @@
 		5A7664201DCC31C00040DB19 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = LiCheng;
 				TargetAttributes = {
 					5A7664271DCC31C00040DB19 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 756Z777W2K;
 					};
 					5A7664401DCC31C00040DB19 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 756Z777W2K;
 						TestTargetID = 5A7664271DCC31C00040DB19;
 					};
 					5A76644B1DCC31C00040DB19 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 756Z777W2K;
 						TestTargetID = 5A7664271DCC31C00040DB19;
 					};
 				};
@@ -529,10 +600,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8AB1D31DD9617A007E3E90 /* BSRecommendTagCell.xib in Resources */,
 				5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */,
 				5A8B4F811DCC8601009DFC50 /* BSRecommendCategoryCell.xib in Resources */,
 				5A8B4F711DCC797B009DFC50 /* BSRecommendViewController.xib in Resources */,
 				5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */,
+				5A8AB1DC1DD98DA6007E3E90 /* BSLoginRegisterViewController.xib in Resources */,
 				5A7664381DCC31C00040DB19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,17 +683,23 @@
 				5A8B4F801DCC8601009DFC50 /* BSRecommendCategoryCell.m in Sources */,
 				5A1D9A301DCF01FE002A5F59 /* BSRecommendUsersCell.m in Sources */,
 				5A8B4F701DCC797B009DFC50 /* BSRecommendViewController.m in Sources */,
+				5A8AB1CB1DD95FE3007E3E90 /* BSRecommendTag.m in Sources */,
+				5A8AB1D21DD9617A007E3E90 /* BSRecommendTagCell.m in Sources */,
 				5A7664901DCC34E10040DB19 /* AppDelegate.m in Sources */,
 				5A76648E1DCC34E10040DB19 /* BSEssenceViewController.m in Sources */,
+				5A8AB1DF1DD99B07007E3E90 /* BSVerticalButton.m in Sources */,
 				5A7664971DCC34E10040DB19 /* UIView+BSFrame.m in Sources */,
 				5A7664921DCC34E10040DB19 /* BSTabBarController.m in Sources */,
 				5A7664941DCC34E10040DB19 /* UIBarButtonItem+BSExtension.m in Sources */,
+				5A4451501DDAAE04003689B6 /* BSLoginTextFiled.m in Sources */,
 				5A7664961DCC34E10040DB19 /* BSNewViewController.m in Sources */,
+				5A8AB1DB1DD98DA6007E3E90 /* BSLoginRegisterViewController.m in Sources */,
 				5A1D9A341DCF0428002A5F59 /* BSRecommendUser.m in Sources */,
 				5A76648F1DCC34E10040DB19 /* BSFriendTrendsViewController.m in Sources */,
 				5A7664931DCC34E10040DB19 /* BSTabBar.m in Sources */,
 				5A76642D1DCC31C00040DB19 /* main.m in Sources */,
 				5A7664911DCC34E10040DB19 /* BSNavigationController.m in Sources */,
+				5A86B7521DD95D000061E14A /* BSRecommendTagsViewController.m in Sources */,
 				5A7664951DCC34E10040DB19 /* BSMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,13 +750,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 756Z777W2K;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -694,7 +777,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -716,13 +799,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 756Z777W2K;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -733,7 +820,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

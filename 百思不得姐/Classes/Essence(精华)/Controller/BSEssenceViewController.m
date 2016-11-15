@@ -7,6 +7,7 @@
 //
 
 #import "BSEssenceViewController.h"
+#import "BSRecommendTagsViewController.h"
 
 @interface BSEssenceViewController ()
 
@@ -36,9 +37,8 @@
  */
 - (void)leftClick {
     
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor redColor];
-    [self.navigationController pushViewController:vc animated:YES];
+    BSRecommendTagsViewController *tagsVC = [[BSRecommendTagsViewController alloc] init];
+    [self.navigationController pushViewController:tagsVC animated:YES];
 }
 
 @end

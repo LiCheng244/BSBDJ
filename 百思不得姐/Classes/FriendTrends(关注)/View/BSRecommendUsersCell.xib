@@ -23,9 +23,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-5k-y7z">
-                        <rect key="frame" x="70" y="35" width="42" height="21"/>
+                        <rect key="frame" x="70" y="35" width="167" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4K-so-NvE">
@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMN-JF-2Ay">
-                        <rect key="frame" x="0.0" y="120.5" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="120" width="320" height="1"/>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Mbg-we-mLf"/>
@@ -65,6 +65,7 @@
                     <constraint firstItem="Hz2-5k-y7z" firstAttribute="leading" secondItem="cjj-2H-zbg" secondAttribute="trailing" constant="10" id="kGy-oP-SvF"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mrp-bR-cLY" secondAttribute="trailing" constant="15" id="lxT-ad-cdu"/>
                     <constraint firstAttribute="trailing" secondItem="pMN-JF-2Ay" secondAttribute="trailing" id="mxx-QF-xJK"/>
+                    <constraint firstItem="mrp-bR-cLY" firstAttribute="leading" secondItem="Hz2-5k-y7z" secondAttribute="trailing" constant="10" id="nHj-6E-KOF"/>
                     <constraint firstItem="pMN-JF-2Ay" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qqG-nl-25X"/>
                     <constraint firstAttribute="bottom" secondItem="pMN-JF-2Ay" secondAttribute="bottom" id="r4Q-uB-xF6"/>
                     <constraint firstItem="mrp-bR-cLY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wFd-Vh-LHw"/>

@@ -6,4 +6,5 @@ target ‘百思不得姐’ do
   pod "SDWebImage"
   pod "SVProgressHUD"
   pod "MJExtension"
+  pod "MJRefresh"
 end

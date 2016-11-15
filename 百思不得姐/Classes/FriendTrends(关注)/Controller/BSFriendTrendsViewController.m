@@ -8,12 +8,16 @@
 
 #import "BSFriendTrendsViewController.h"
 #import "BSRecommendViewController.h"
+#import "AFNetworking.h"
+
+#import "BSLoginRegisterViewController.h"
 
 @interface BSFriendTrendsViewController ()
 
 @end
 
 @implementation BSFriendTrendsViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +39,14 @@
     
     // 设置背景颜色
     self.view.backgroundColor = BSGlobalColor;
+}
+
+
+- (IBAction)loginClick:(id)sender {
+    
+    BSLoginRegisterViewController *loginVC = [[BSLoginRegisterViewController alloc] init];
+    [self.navigationController presentViewController:loginVC animated:YES completion:nil];
+    
 }
 
 - (void)friendsClick {

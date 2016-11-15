@@ -20,9 +20,10 @@
     /**
      *  appearanceWhenContainedInInstancesOfClasses
      *
-     *  该方法是设置, 当导航栏包含在当前控制器下才会 设置下面的背景图片, 其他的话不会设置
+     *  该方法是设置, 当导航栏包含在当前控制器下才会 设置下面导航栏的背景图片, 其他的话不会设置
      */
     
+//    [bar setBackgroundColor:[UIColor redColor]];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]
               forBarMetrics:(UIBarMetricsDefault)];
 }

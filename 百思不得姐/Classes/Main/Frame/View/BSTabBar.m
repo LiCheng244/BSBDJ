@@ -45,7 +45,7 @@
 }
 
 /**
- *  布局子控件
+ *  重新布局子控件
  */
 - (void)layoutSubviews{
     

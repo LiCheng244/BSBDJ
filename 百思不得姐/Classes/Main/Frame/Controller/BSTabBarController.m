@@ -21,6 +21,11 @@
 
 @implementation BSTabBarController
 
+/**
+ *  第一次主动调用当前类的时候触发(第一次alloc时)
+ *  该方法被调用时, 应用的运行环境基本健全.
+ *  该方法的运行过程中,能保证线程是安全的.
+ */
 + (void)initialize{
     
     // 1. 通过 appearance 统一设置所有tabbaritem的文字属性
@@ -36,7 +41,7 @@
     [item setTitleTextAttributes:attr forState:(UIControlStateNormal)];
     [item setTitleTextAttributes:selectAttr forState:(UIControlStateSelected)];
     /**
-     pai中 后面带有 UI_APPEARANCE_SELECTOR 的方法, 都可以通过 appearance 来统一设置属性
+     api中 后面带有 UI_APPEARANCE_SELECTOR 的方法, 都可以通过 appearance 来统一设置属性
      */
 }
 
