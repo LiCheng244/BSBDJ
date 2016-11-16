@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BSTabBarController.h"
+#import "BSPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     
     // 创建窗口
     self.window = [[UIWindow alloc] init];
@@ -29,6 +29,8 @@
     // 显示窗口
     [self.window makeKeyAndVisible];
     
+    // 显示推送指南
+    [BSPushGuideView show];
     
     return YES;
 }

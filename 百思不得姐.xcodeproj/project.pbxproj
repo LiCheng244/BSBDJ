@@ -12,6 +12,8 @@
 		5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1D9A2F1DCF01FE002A5F59 /* BSRecommendUsersCell.xib */; };
 		5A1D9A341DCF0428002A5F59 /* BSRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D9A331DCF0428002A5F59 /* BSRecommendUser.m */; };
 		5A4451501DDAAE04003689B6 /* BSLoginTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44514F1DDAAE04003689B6 /* BSLoginTextFiled.m */; };
+		5A44515C1DDAE909003689B6 /* BSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44515B1DDAE909003689B6 /* BSPushGuideView.m */; };
+		5A44515E1DDAE912003689B6 /* BSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A44515D1DDAE912003689B6 /* BSPushGuideView.xib */; };
 		5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */; };
 		5A76642D1DCC31C00040DB19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A76642C1DCC31C00040DB19 /* main.m */; };
 		5A7664381DCC31C00040DB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7664371DCC31C00040DB19 /* Assets.xcassets */; };
@@ -67,6 +69,9 @@
 		5A1D9A331DCF0428002A5F59 /* BSRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendUser.m; sourceTree = "<group>"; };
 		5A44514E1DDAAE04003689B6 /* BSLoginTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginTextFiled.h; sourceTree = "<group>"; };
 		5A44514F1DDAAE04003689B6 /* BSLoginTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginTextFiled.m; sourceTree = "<group>"; };
+		5A44515A1DDAE909003689B6 /* BSPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPushGuideView.h; sourceTree = "<group>"; };
+		5A44515B1DDAE909003689B6 /* BSPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPushGuideView.m; sourceTree = "<group>"; };
+		5A44515D1DDAE912003689B6 /* BSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPushGuideView.xib; sourceTree = "<group>"; };
 		5A62E6CE1DCC648A00FAFBC5 /* note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = note.h; sourceTree = "<group>"; };
 		5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		5A7664281DCC31C00040DB19 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +172,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5A4451511DDAE514003689B6 /* Guide(引导) */ = {
+			isa = PBXGroup;
+			children = (
+				5A4451521DDAE514003689B6 /* Controller */,
+				5A4451531DDAE514003689B6 /* Model */,
+				5A4451541DDAE514003689B6 /* View */,
+			);
+			path = "Guide(引导)";
+			sourceTree = "<group>";
+		};
+		5A4451521DDAE514003689B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5A4451531DDAE514003689B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5A4451541DDAE514003689B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A44515A1DDAE909003689B6 /* BSPushGuideView.h */,
+				5A44515B1DDAE909003689B6 /* BSPushGuideView.m */,
+				5A44515D1DDAE912003689B6 /* BSPushGuideView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5A76641F1DCC31C00040DB19 = {
 			isa = PBXGroup;
 			children = (
@@ -231,11 +270,12 @@
 			isa = PBXGroup;
 			children = (
 				5A76646F1DCC34E10040DB19 /* Main */,
+				5A4451511DDAE514003689B6 /* Guide(引导) */,
+				5A8AB1D41DD98D7F007E3E90 /* Login(登录) */,
 				5A7664631DCC34E10040DB19 /* Essence(精华) */,
 				5A7664841DCC34E10040DB19 /* New(新帖) */,
 				5A7664691DCC34E10040DB19 /* FriendTrends(关注) */,
 				5A76647E1DCC34E10040DB19 /* Me(我) */,
-				5A8AB1D41DD98D7F007E3E90 /* Login(登录) */,
 				5A76648A1DCC34E10040DB19 /* Other(其他) */,
 			);
 			path = Classes;
@@ -603,6 +643,7 @@
 				5A8AB1D31DD9617A007E3E90 /* BSRecommendTagCell.xib in Resources */,
 				5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */,
 				5A8B4F811DCC8601009DFC50 /* BSRecommendCategoryCell.xib in Resources */,
+				5A44515E1DDAE912003689B6 /* BSPushGuideView.xib in Resources */,
 				5A8B4F711DCC797B009DFC50 /* BSRecommendViewController.xib in Resources */,
 				5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */,
 				5A8AB1DC1DD98DA6007E3E90 /* BSLoginRegisterViewController.xib in Resources */,
@@ -689,6 +730,7 @@
 				5A76648E1DCC34E10040DB19 /* BSEssenceViewController.m in Sources */,
 				5A8AB1DF1DD99B07007E3E90 /* BSVerticalButton.m in Sources */,
 				5A7664971DCC34E10040DB19 /* UIView+BSFrame.m in Sources */,
+				5A44515C1DDAE909003689B6 /* BSPushGuideView.m in Sources */,
 				5A7664921DCC34E10040DB19 /* BSTabBarController.m in Sources */,
 				5A7664941DCC34E10040DB19 /* UIBarButtonItem+BSExtension.m in Sources */,
 				5A4451501DDAAE04003689B6 /* BSLoginTextFiled.m in Sources */,

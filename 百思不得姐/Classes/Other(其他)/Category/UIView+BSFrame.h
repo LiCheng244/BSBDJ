@@ -16,6 +16,10 @@
 @property (nonatomic, assign)CGFloat height;
 @property (nonatomic, assign)CGSize  size;
 
+
+@property (nonatomic, assign)CGFloat centerX;
+@property (nonatomic, assign)CGFloat centerY;
+
 /**
  *  在分类中声明@property, 只会生成方法的声明, 不会生成方法的实现 和 带有下划线的成员变量
  */

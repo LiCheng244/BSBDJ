@@ -13,7 +13,8 @@
 #import "UIView+BSFrame.h"
 #import "UIBarButtonItem+BSExtension.h"
 
-
+// 当前版本号
+#define BSCurrentVersion [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
 
 // dug下打印
 #ifdef DEBUG

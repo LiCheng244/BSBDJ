@@ -18,37 +18,11 @@
 @implementation BSLoginTextFiled
 
 
-/**
- *  利用runtime 查看UITextFiled 都有哪些隐藏的属性
- */
 +(void)initialize{
     
-    unsigned int count = 0;
-    
-    // 拷贝出所有的成员变量列表
-    Ivar *ivars = class_copyIvarList([UITextField class], &count);
-    /**
-     *  参数1:  要查看的类
-        参数2:  给一个地址, 存变量列表的个数
-        
-        Ivar *ivars是一个指针: 指向成员变量数组中的第一个元素 , 且该数组中的元素类型都是Ivar类型
-     */
-    
-    for (int i = 0; i < count; i++) {
-        
-        // 取出成员变量 (通过指针下标)
-        Ivar ivar = *(ivars + i);
-//        Ivar ivar = ivars[i]; (效果一样)
-        
-        // 获取变量名称
-        const char *name = ivar_getName(ivar);
-//        BSLog(@"%s", name);
-    }
-    
-    // 释放内存 (因为是拷贝出来的所以需要自己释放)
-    free(ivars);
-    
+//    [self runtimeGetPropertiesList];
 }
+
 
 /**
  *  相当于 : initWithFrame
@@ -64,6 +38,7 @@
     // 修改光标颜色
     self.tintColor = self.textColor;
 }
+
 
 /**
  *  成为第一响应者, 当前文本框聚焦时调用
@@ -83,6 +58,67 @@
     self.placeholderLabel.textColor = [UIColor grayColor];
     return [super resignFirstResponder];
 }
+
+
+
+
+
+/**
+ *  利用runtime 获取类的属性
+ */
++(void)runtimeGetPropertiesList {
+    
+    unsigned int count = 0;
+    objc_property_t *properties = class_copyPropertyList([UITextField class], &count);
+    
+    for (int i = 0; i < count; i++) {
+        
+        objc_property_t property = properties[i];
+        
+        // 获取属性名称
+        const char *name = property_getName(property);
+        BSLog(@"%s", name);
+        
+        // 属性类型
+        const char *type = property_getAttributes(property);
+        BSLog(@"%s", type);
+    }
+    
+    free(properties);
+}
+
+/**
+ *  利用runtime 获取类的成员变量
+ */
++(void)runtimeGetIvarList {
+    
+    unsigned int count = 0;
+    
+    // 拷贝出所有的成员变量列表
+    Ivar *ivars = class_copyIvarList([UITextField class], &count);
+    /**
+     *  参数1:  要查看的类
+     参数2:  给一个地址, 存变量列表的个数
+     
+     Ivar *ivars是一个指针: 指向成员变量数组中的第一个元素 , 且该数组中的元素类型都是Ivar类型
+     */
+    
+    for (int i = 0; i < count; i++) {
+        
+        // 取出成员变量 (通过指针下标)
+        Ivar ivar = *(ivars + i);
+        //Ivar ivar = ivars[i]; (效果一样)
+        
+        // 获取变量名称
+        const char *name = ivar_getName(ivar);
+        BSLog(@"%s", name);
+    }
+    
+    // 释放内存 (因为是拷贝出来的所以需要自己释放)
+    free(ivars);
+}
+
+
 
 /**
  *      通过富文本属性 直接赋值
