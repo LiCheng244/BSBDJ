@@ -21,7 +21,6 @@
 #define BSSelectedCategory self.categorys[self.categoryTableView.indexPathForSelectedRow.row]
 
 
-
 @interface BSRecommendViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 /** 左侧的分类表格 */
@@ -32,7 +31,7 @@
 /** 左侧的分类数据 */
 @property (nonatomic, strong) NSArray *categorys;
 /** 保存用户数据请求的参数 */
-@property (nonatomic, strong) NSMutableDictionary *parameters;
+@property (nonatomic, strong) NSMutableDictionary *params;
 /** AFN的请求管理者 */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
 
@@ -49,17 +48,17 @@ static NSString * const BSUsersID = @"users";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置tableView
-    [self setUpTableView];
-    
     // 添加指示器
     [SVProgressHUD show];
-    
-    // 加载分类数据
-    [self loadCategorys];
+   
+    // 设置tableView
+    [self setUpTableView];
 
     // 添加刷新加载控件
     [self setUpRefresh];
+    
+    // 加载分类数据
+    [self loadCategorys];
 }
 
 #pragma mark - <私有方法>
@@ -78,21 +77,21 @@ static NSString * const BSUsersID = @"users";
 - (void)setUpTableView {
     
     // 设置基本信息
-    self.title = @"推荐关注";
-    self.view.backgroundColor = BSGlobalColor;
+    self.title                          = @"推荐关注";
+    self.view.backgroundColor           = BSGlobalColor;
     self.usersTableView.backgroundColor = BSGlobalColor;
-    
+    self.usersTableView.rowHeight       = 70;
+
     // 注册cell
-    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:BSCategoryID];
-    [self.usersTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecommendUsersCell class]) bundle:nil] forCellReuseIdentifier:BSUsersID];
-    
-    // 设置高度
-    self.usersTableView.rowHeight = 70;
+    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecommendCategoryCell class]) bundle:nil]
+                 forCellReuseIdentifier:BSCategoryID];
+    [self.usersTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecommendUsersCell class]) bundle:nil]
+              forCellReuseIdentifier:BSUsersID];
     
     // 设置inset
     self.automaticallyAdjustsScrollViewInsets = NO; // 告诉view 不自适应
-    self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-    self.usersTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.categoryTableView.contentInset       = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.usersTableView.contentInset          = UIEdgeInsetsMake(64, 0, 0, 0);
 }
 
 /**
@@ -101,10 +100,12 @@ static NSString * const BSUsersID = @"users";
 - (void)setUpRefresh {
     
     // 下拉加载控件
-    self.usersTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
+    self.usersTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
+                                                                     refreshingAction:@selector(loadNewUsers)];
     
     // 上啦刷新控件
-    self.usersTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
+    self.usersTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
+                                                                         refreshingAction:@selector(loadMoreUsers)];
 }
 
 /**
@@ -125,7 +126,6 @@ static NSString * const BSUsersID = @"users";
         // 底部控件结束刷新
         [self.usersTableView.mj_footer endRefreshing];
     }
-
 }
 
 #pragma mark - <网络请求>
@@ -135,11 +135,11 @@ static NSString * const BSUsersID = @"users";
 - (void)loadCategorys {
     
     // 请求参数
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"c"] = @"subscribe";
-    parameters[@"a"] = @"category";
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"c"]                = @"subscribe";
+    params[@"a"]                = @"category";
     
-    [self.manager GET:BSBaseAPI parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:BSBaseAPI parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         // 隐藏信息
         [SVProgressHUD dismiss];
@@ -174,15 +174,15 @@ static NSString * const BSUsersID = @"users";
     category.currentPage = 1;
     
     // 参数
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"c"] = @"subscribe";
-    parameters[@"a"] = @"list";
-    parameters[@"category_id"] = @(category.id);
-    parameters[@"page"] = @(category.currentPage);
-    self.parameters = parameters;
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"c"]                = @"subscribe";
+    params[@"a"]                = @"list";
+    params[@"category_id"]      = @(category.id);
+    params[@"page"]             = @(category.currentPage);
+    self.params                 = params;
     
     
-    [self.manager GET:BSBaseAPI parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:BSBaseAPI parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         // 返回的json数据
         NSArray *users = [BSRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -196,7 +196,7 @@ static NSString * const BSUsersID = @"users";
         
         
         // 如果是最后一次请求再刷新表格
-        if (self.parameters != parameters) return;
+        if (self.params != params) return;
         
         [self.usersTableView reloadData];
         
@@ -210,7 +210,7 @@ static NSString * const BSUsersID = @"users";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
         // 避免多次不同请求(总是请求最后一次的)
-        if (self.parameters != parameters) return;
+        if (self.params != params) return;
 
         // 显示加载失败信息
         [SVProgressHUD showErrorWithStatus:@"加载失败!"];
@@ -229,14 +229,14 @@ static NSString * const BSUsersID = @"users";
     BSRecommendCategory *category = BSSelectedCategory;
     
     // 参数
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"c"] = @"subscribe";
-    parameters[@"a"] = @"list";
-    parameters[@"category_id"] = @(category.id);
-    parameters[@"page"] = @(++category.currentPage);
-    self.parameters = parameters;
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"c"]                = @"subscribe";
+    params[@"a"]                = @"list";
+    params[@"category_id"]      = @(category.id);
+    params[@"page"]             = @(++category.currentPage);
+    self.params                 = params;
     
-    [self.manager GET:BSBaseAPI parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:BSBaseAPI parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
         // 返回的json数据
         NSArray *users = [BSRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -246,7 +246,7 @@ static NSString * const BSUsersID = @"users";
         
     
         // 如果是最后一次请求再刷新表格
-        if (self.parameters != parameters) return;
+        if (self.params != params) return;
         
         [self.usersTableView reloadData];
         
@@ -257,7 +257,7 @@ static NSString * const BSUsersID = @"users";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         // 避免多次不同请求(总是请求最后一次的)
-        if (self.parameters != parameters) return;
+        if (self.params != params) return;
 
         // 显示加载失败信息
         [SVProgressHUD showErrorWithStatus:@"加载失败!"];

@@ -46,15 +46,15 @@
     [super layoutSubviews];
     
     // 调整图片位置
-    self.imageView.x = 0;
-    self.imageView.y = 0;
-    self.imageView.width = self.width;
-    self.imageView.height = self.imageView.width;
+    self.imageView.bs_x = 0;
+    self.imageView.bs_y = 0;
+    self.imageView.bs_width = self.bs_width;
+    self.imageView.bs_height = self.imageView.bs_width;
     
     // 设置文字位置
-    self.titleLabel.x = 0;
-    self.titleLabel.y = self.imageView.height + 5;
-    self.titleLabel.width = self.width;
-    self.titleLabel.height = self.height - self.imageView.height;
+    self.titleLabel.bs_x = 0;
+    self.titleLabel.bs_y = self.imageView.bs_width + 5;
+    self.titleLabel.bs_width = self.bs_width;
+    self.titleLabel.bs_height = self.bs_height - self.imageView.bs_height;
 }
 @end

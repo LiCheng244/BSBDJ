@@ -37,7 +37,7 @@
     
     if (self.loginViewLeftMargin.constant == 0) { // 正在显示登录, 需要切换到注册
         
-        self.loginViewLeftMargin.constant = -self.view.width;
+        self.loginViewLeftMargin.constant = -self.view.bs_width;
         [button setTitle:@"已有账号?" forState:(UIControlStateNormal)];
         
     }else{ // 正在显示注册界面, 需要切换到登录

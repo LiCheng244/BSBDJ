@@ -51,8 +51,8 @@
     [super layoutSubviews];
     
     // 重新调整内部textLabel 的frame(不要挡住自定义的底部白线)
-    self.textLabel.y = 2;
-    self.textLabel.height = self.contentView.height - 2 * self.textLabel.y;
+    self.textLabel.bs_y = 2;
+    self.textLabel.bs_height = self.contentView.bs_height - 2 * self.textLabel.bs_y;
 }
 
 

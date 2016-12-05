@@ -28,8 +28,10 @@
     
     _user = user;
     
+    
+    NSString *fansCount   = [NSString changeNumberIntoString:user.fans_count placeholer:@"关注"];
+    _fansCountLabel.text  = [NSString stringWithFormat:@"%@人关注", fansCount];
     _screenNameLabel.text = user.screen_name;
-    _fansCountLabel.text  = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
     [_headerImgView sd_setImageWithURL:[NSURL URLWithString:user.header]
                       placeholderImage:[UIImage imageNamed:@"cellFollowDisableIcon"]];
 }

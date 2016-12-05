@@ -35,7 +35,7 @@
         [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"]
                     forState:(UIControlStateHighlighted)];
 
-        publishBtn.size = publishBtn.currentImage.size;
+        publishBtn.bs_size = publishBtn.currentImage.size;
 
         [self addSubview:publishBtn];
 
@@ -52,12 +52,12 @@
     [super layoutSubviews];
     
     // 设置发布按钮的位置
-    self.publishBtn.center = CGPointMake(self.width * 0.5, self.height * 0.5);
+    self.publishBtn.center = CGPointMake(self.bs_width * 0.5, self.bs_height * 0.5);
 
     // 设置其他按钮的frame
     CGFloat buttonY  = 0;
-    CGFloat buttonW  = self.width / 5;
-    CGFloat buttonH  = self.height;
+    CGFloat buttonW  = self.bs_width / 5;
+    CGFloat buttonH  = self.bs_height;
     NSUInteger index = 0;
     
     for (UIView *button in self.subviews) {
@@ -67,7 +67,7 @@
         
         // 计算按钮的X值
         CGFloat buttonX = buttonW * ((index > 1) ? (index + 1) : index);
-        button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
+        button.frame    = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         
         // 增加索引值
         index++;

@@ -31,26 +31,31 @@ static NSString * const BSTagID = @"tag";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 菊花转
     [SVProgressHUD show];
     
+    // 设置tableView
     [self setUpTableView];
     
+    // 加载数据
     [self loadTags];
+    
 }
+
 #pragma mark - <私有方法>
 /**
  *  设置tableView
  */
 - (void)setUpTableView {
     
-    self.navigationItem.title = @"推荐标签";
-    self.view.backgroundColor = BSGlobalColor;
-    self.tableView.rowHeight = 70;
+    self.navigationItem.title     = @"推荐标签";
+    self.view.backgroundColor     = BSGlobalColor;
+    self.tableView.rowHeight      = 70;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecommendTagCell class]) bundle:nil] forCellReuseIdentifier:BSTagID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecommendTagCell class]) bundle:nil]
+         forCellReuseIdentifier:BSTagID];
 }
-
 
 #pragma mark - <网络请求>
 /**
@@ -58,12 +63,15 @@ static NSString * const BSTagID = @"tag";
  */
 - (void)loadTags {
     
-    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
-    parameter[@"a"] = @"tag_recommend";
-    parameter[@"c"] = @"topic";
-    parameter[@"action"] = @"sub";
     
-    [[AFHTTPSessionManager manager] GET:BSBaseAPI parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    // 请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"]                = @"tag_recommend";
+    params[@"c"]                = @"topic";
+    params[@"action"]           = @"sub";
+    
+    // 请求
+    [[AFHTTPSessionManager manager] GET:BSBaseAPI parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         self.tags = [BSRecommendTag mj_objectArrayWithKeyValuesArray:responseObject];
         [self.tableView reloadData];
@@ -86,7 +94,7 @@ static NSString * const BSTagID = @"tag";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     BSRecommendTagCell *cell = [tableView dequeueReusableCellWithIdentifier:BSTagID];
-    cell.recommendTag = self.tags[indexPath.row];
+    cell.recommendTag        = self.tags[indexPath.row];
     return cell;
 }
 @end

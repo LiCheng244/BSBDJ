@@ -41,6 +41,13 @@
 		5A8B4F741DCC8397009DFC50 /* BSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B4F731DCC8397009DFC50 /* BSRecommendCategory.m */; };
 		5A8B4F801DCC8601009DFC50 /* BSRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B4F7E1DCC8601009DFC50 /* BSRecommendCategoryCell.m */; };
 		5A8B4F811DCC8601009DFC50 /* BSRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8B4F7F1DCC8601009DFC50 /* BSRecommendCategoryCell.xib */; };
+		5AAD97531DF1648B000B7389 /* BSConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD97521DF1648B000B7389 /* BSConstant.m */; };
+		5ACA98531DF021600063BC43 /* BSPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA98521DF021600063BC43 /* BSPosts.m */; };
+		5AD0EC9E1DF51B61004B494E /* NSString+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0EC9D1DF51B61004B494E /* NSString+Custom.m */; };
+		5AD0ECA11DF5496D004B494E /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0ECA01DF5496D004B494E /* NSDate+Extension.m */; };
+		5AD0ECA41DF56DAF004B494E /* BSPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0ECA31DF56DAF004B494E /* BSPostsViewController.m */; };
+		5AD0ECA81DF570E6004B494E /* BSPostsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0ECA61DF570E6004B494E /* BSPostsCell.m */; };
+		5AD0ECA91DF570E6004B494E /* BSPostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD0ECA71DF570E6004B494E /* BSPostsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +105,6 @@
 		5A76647A1DCC34E10040DB19 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
 		5A76647B1DCC34E10040DB19 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
 		5A76647C1DCC34E10040DB19 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
-		5A76647D1DCC34E10040DB19 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5A7664801DCC34E10040DB19 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
 		5A7664811DCC34E10040DB19 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
 		5A7664861DCC34E10040DB19 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
@@ -125,6 +131,20 @@
 		5A8B4F7D1DCC8601009DFC50 /* BSRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendCategoryCell.h; sourceTree = "<group>"; };
 		5A8B4F7E1DCC8601009DFC50 /* BSRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendCategoryCell.m; sourceTree = "<group>"; };
 		5A8B4F7F1DCC8601009DFC50 /* BSRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		5AAD97511DF1648B000B7389 /* BSConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSConstant.h; sourceTree = "<group>"; };
+		5AAD97521DF1648B000B7389 /* BSConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSConstant.m; sourceTree = "<group>"; };
+		5AB34FDA1DF1698E006C81A4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5ACA98511DF021600063BC43 /* BSPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPosts.h; sourceTree = "<group>"; };
+		5ACA98521DF021600063BC43 /* BSPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPosts.m; sourceTree = "<group>"; };
+		5AD0EC9C1DF51B61004B494E /* NSString+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Custom.h"; sourceTree = "<group>"; };
+		5AD0EC9D1DF51B61004B494E /* NSString+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Custom.m"; sourceTree = "<group>"; };
+		5AD0EC9F1DF5496D004B494E /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		5AD0ECA01DF5496D004B494E /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		5AD0ECA21DF56DAF004B494E /* BSPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPostsViewController.h; sourceTree = "<group>"; };
+		5AD0ECA31DF56DAF004B494E /* BSPostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPostsViewController.m; sourceTree = "<group>"; };
+		5AD0ECA51DF570E6004B494E /* BSPostsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPostsCell.h; sourceTree = "<group>"; };
+		5AD0ECA61DF570E6004B494E /* BSPostsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPostsCell.m; sourceTree = "<group>"; };
+		5AD0ECA71DF570E6004B494E /* BSPostsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPostsCell.xib; sourceTree = "<group>"; };
 		79E23170291A9385906097CA /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 		C9B9EC4F795FC95F503F9D7B /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -298,6 +318,8 @@
 				5A7664661DCC34E10040DB19 /* BSEssenceViewController.m */,
 				5A86B7501DD95D000061E14A /* BSRecommendTagsViewController.h */,
 				5A86B7511DD95D000061E14A /* BSRecommendTagsViewController.m */,
+				5AD0ECA21DF56DAF004B494E /* BSPostsViewController.h */,
+				5AD0ECA31DF56DAF004B494E /* BSPostsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +329,8 @@
 			children = (
 				5A8AB1C91DD95FE3007E3E90 /* BSRecommendTag.h */,
 				5A8AB1CA1DD95FE3007E3E90 /* BSRecommendTag.m */,
+				5ACA98511DF021600063BC43 /* BSPosts.h */,
+				5ACA98521DF021600063BC43 /* BSPosts.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +341,9 @@
 				5A8AB1CF1DD9617A007E3E90 /* BSRecommendTagCell.h */,
 				5A8AB1D01DD9617A007E3E90 /* BSRecommendTagCell.m */,
 				5A8AB1D11DD9617A007E3E90 /* BSRecommendTagCell.xib */,
+				5AD0ECA51DF570E6004B494E /* BSPostsCell.h */,
+				5AD0ECA61DF570E6004B494E /* BSPostsCell.m */,
+				5AD0ECA71DF570E6004B494E /* BSPostsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,10 +398,11 @@
 		5A76646F1DCC34E10040DB19 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5AAD974F1DF16462000B7389 /* PCH */,
 				5A7664721DCC34E10040DB19 /* Frame */,
 				5A7664701DCC34E10040DB19 /* AppDelegate.h */,
 				5A7664711DCC34E10040DB19 /* AppDelegate.m */,
-				5A76647D1DCC34E10040DB19 /* PrefixHeader.pch */,
+				5AB34FDA1DF1698E006C81A4 /* PrefixHeader.pch */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -489,6 +517,10 @@
 			children = (
 				5A76648C1DCC34E10040DB19 /* UIView+BSFrame.h */,
 				5A76648D1DCC34E10040DB19 /* UIView+BSFrame.m */,
+				5AD0EC9C1DF51B61004B494E /* NSString+Custom.h */,
+				5AD0EC9D1DF51B61004B494E /* NSString+Custom.m */,
+				5AD0EC9F1DF5496D004B494E /* NSDate+Extension.h */,
+				5AD0ECA01DF5496D004B494E /* NSDate+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -529,6 +561,15 @@
 				5A44514F1DDAAE04003689B6 /* BSLoginTextFiled.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5AAD974F1DF16462000B7389 /* PCH */ = {
+			isa = PBXGroup;
+			children = (
+				5AAD97511DF1648B000B7389 /* BSConstant.h */,
+				5AAD97521DF1648B000B7389 /* BSConstant.m */,
+			);
+			path = PCH;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,6 +684,7 @@
 				5A8AB1D31DD9617A007E3E90 /* BSRecommendTagCell.xib in Resources */,
 				5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */,
 				5A8B4F811DCC8601009DFC50 /* BSRecommendCategoryCell.xib in Resources */,
+				5AD0ECA91DF570E6004B494E /* BSPostsCell.xib in Resources */,
 				5A44515E1DDAE912003689B6 /* BSPushGuideView.xib in Resources */,
 				5A8B4F711DCC797B009DFC50 /* BSRecommendViewController.xib in Resources */,
 				5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */,
@@ -720,14 +762,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACA98531DF021600063BC43 /* BSPosts.m in Sources */,
 				5A8B4F741DCC8397009DFC50 /* BSRecommendCategory.m in Sources */,
+				5AD0ECA11DF5496D004B494E /* NSDate+Extension.m in Sources */,
 				5A8B4F801DCC8601009DFC50 /* BSRecommendCategoryCell.m in Sources */,
 				5A1D9A301DCF01FE002A5F59 /* BSRecommendUsersCell.m in Sources */,
+				5AAD97531DF1648B000B7389 /* BSConstant.m in Sources */,
 				5A8B4F701DCC797B009DFC50 /* BSRecommendViewController.m in Sources */,
 				5A8AB1CB1DD95FE3007E3E90 /* BSRecommendTag.m in Sources */,
 				5A8AB1D21DD9617A007E3E90 /* BSRecommendTagCell.m in Sources */,
+				5AD0EC9E1DF51B61004B494E /* NSString+Custom.m in Sources */,
 				5A7664901DCC34E10040DB19 /* AppDelegate.m in Sources */,
 				5A76648E1DCC34E10040DB19 /* BSEssenceViewController.m in Sources */,
+				5AD0ECA81DF570E6004B494E /* BSPostsCell.m in Sources */,
 				5A8AB1DF1DD99B07007E3E90 /* BSVerticalButton.m in Sources */,
 				5A7664971DCC34E10040DB19 /* UIView+BSFrame.m in Sources */,
 				5A44515C1DDAE909003689B6 /* BSPushGuideView.m in Sources */,
@@ -741,6 +788,7 @@
 				5A7664931DCC34E10040DB19 /* BSTabBar.m in Sources */,
 				5A76642D1DCC31C00040DB19 /* main.m in Sources */,
 				5A7664911DCC34E10040DB19 /* BSNavigationController.m in Sources */,
+				5AD0ECA41DF56DAF004B494E /* BSPostsViewController.m in Sources */,
 				5A86B7521DD95D000061E14A /* BSRecommendTagsViewController.m in Sources */,
 				5A7664951DCC34E10040DB19 /* BSMeViewController.m in Sources */,
 			);
@@ -809,6 +857,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -856,6 +906,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

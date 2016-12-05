@@ -10,75 +10,75 @@
 
 @implementation UIView (BSFrame)
 
--(void)setX:(CGFloat)x{
+-(void)setBs_x:(CGFloat)bs_x{
     
     CGRect frame   = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = bs_x;
     self.frame     = frame;
 }
 
--(void)setY:(CGFloat)y{
+-(void)setBs_y:(CGFloat)bs_y{
     
     CGRect frame   = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = bs_y;
     self.frame     = frame;
 }
 
--(void)setWidth:(CGFloat)width{
+-(void)setBs_width:(CGFloat)bs_width{
     
     CGRect frame     = self.frame;
-    frame.size.width = width;
+    frame.size.width = bs_width;
     self.frame       = frame;
 }
 
--(void)setHeight:(CGFloat)height{
+-(void)setBs_height:(CGFloat)bs_height{
     
     CGRect frame      = self.frame;
-    frame.size.height = height;
+    frame.size.height = bs_height;
     self.frame        = frame;
 }
 
--(void)setCenterX:(CGFloat)centerX{
+-(void)setBs_centerX:(CGFloat)bs_centerX{
     CGPoint center = self.center;
-    center.x = centerX;
-    self.center = center;
+    center.x       = bs_centerX;
+    self.center    = center;
 }
 
--(void)setCenterY:(CGFloat)centerY{
+-(void)setBs_centerY:(CGFloat)bs_centerY{
     CGPoint center = self.center;
-    center.y = centerY;
-    self.center = center;
+    center.y       = bs_centerY;
+    self.center    = center;
 }
 
--(CGFloat)centerX{
+-(CGFloat)bs_centerX{
     return self.center.x;
 }
--(CGFloat)centerY{
+-(CGFloat)bs_centerY{
     return self.center.y;
 }
--(CGFloat)x{
+-(CGFloat)bs_x{
     return self.frame.origin.x;
 }
 
--(CGFloat)y{
+-(CGFloat)bs_y{
     return self.frame.origin.y;
 }
 
--(CGFloat)width{
+-(CGFloat)bs_width{
     return self.frame.size.width;
 }
 
--(CGFloat)height{
+-(CGFloat)bs_height{
     return self.frame.size.height;
 }
 
--(void)setSize:(CGSize)size{
+-(void)setBs_size:(CGSize)bs_size{
     
     CGRect frame = self.frame;
-    frame.size   = size;
+    frame.size   = bs_size;
     self.frame   = frame;
 }
--(CGSize)size{
+-(CGSize)bs_size{
     return self.frame.size;
 }
 @end

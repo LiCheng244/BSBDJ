@@ -27,17 +27,13 @@
 - (void)setRecommendTag:(BSRecommendTag *)recommendTag {
     _recommendTag = recommendTag;
 
-    NSString *subNumber = nil;
-    if (recommendTag.sub_number > 10000) {
-        subNumber = [NSString stringWithFormat:@"%.1f万人关注", recommendTag.sub_number / 10000.0];
-    }else{
-        subNumber = [NSString stringWithFormat:@"%zd人关注", recommendTag.sub_number];
-    }
-    _subNumberLabel.text = subNumber;
+    NSString *subNumber = [NSString changeNumberIntoString:recommendTag.sub_number placeholer:@"关注"];
+    _subNumberLabel.text = [NSString stringWithFormat:@"%@人关注", subNumber];
     
     _themeNameLabel.text = recommendTag.theme_name;
-    
-    [_imageListImageView sd_setImageWithURL:[NSURL URLWithString:recommendTag.image_list] placeholderImage:[UIImage imageNamed:@"cellFollowDisableIcon"]];
+
+    [_imageListImageView sd_setImageWithURL:[NSURL URLWithString:recommendTag.image_list]
+                           placeholderImage:[UIImage imageNamed:@"cellFollowDisableIcon"]];
 }
 
 /**

@@ -11,7 +11,11 @@
 #define PrefixHeader_pch
 
 #import "UIView+BSFrame.h"
+#import "NSString+Custom.h"
 #import "UIBarButtonItem+BSExtension.h"
+#import "NSDate+Extension.h"
+
+#import "BSConstant.h"
 
 // 当前版本号
 #define BSCurrentVersion [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]

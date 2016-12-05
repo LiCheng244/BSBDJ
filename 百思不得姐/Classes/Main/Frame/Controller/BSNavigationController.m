@@ -67,7 +67,7 @@
                     action:@selector(backClick)
           forControlEvents:(UIControlEventTouchUpInside)];
         
-        backBtn.size = CGSizeMake(70, 25);
+        backBtn.bs_size = CGSizeMake(70, 25);
         
         // contentHorizontalAlignment: 让按钮内部所有内容左对齐
         backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;

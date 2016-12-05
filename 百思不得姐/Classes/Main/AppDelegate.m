@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // 创建窗口
-    self.window = [[UIWindow alloc] init];
+    self.window       = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
     // 设置窗口的跟控制器

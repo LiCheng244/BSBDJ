@@ -27,7 +27,7 @@
                action:action
      forControlEvents:(UIControlEventTouchUpInside)];
 
-    button.size      = button.currentBackgroundImage.size;
+    button.bs_size  = button.currentBackgroundImage.size;
 
     return [[self alloc] initWithCustomView:button];
     /**
