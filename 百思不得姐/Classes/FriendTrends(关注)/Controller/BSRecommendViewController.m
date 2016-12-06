@@ -177,7 +177,7 @@ static NSString * const BSUsersID = @"users";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"c"]                = @"subscribe";
     params[@"a"]                = @"list";
-    params[@"category_id"]      = @(category.id);
+    params[@"category_id"]      = @(category.ID);
     params[@"page"]             = @(category.currentPage);
     self.params                 = params;
     
@@ -232,7 +232,7 @@ static NSString * const BSUsersID = @"users";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"c"]                = @"subscribe";
     params[@"a"]                = @"list";
-    params[@"category_id"]      = @(category.id);
+    params[@"category_id"]      = @(category.ID);
     params[@"page"]             = @(++category.currentPage);
     self.params                 = params;
     

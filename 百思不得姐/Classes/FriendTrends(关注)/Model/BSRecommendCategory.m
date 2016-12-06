@@ -11,8 +11,15 @@
  */
 
 #import "BSRecommendCategory.h"
-
+#import <MJExtension/MJExtension.h>
 @implementation BSRecommendCategory
+
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    
+    return @{
+             @"ID" : @"id"
+             };
+}
 
 /**
  *  懒加载用户数组

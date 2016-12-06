@@ -11,7 +11,7 @@
 @interface BSRecommendCategory : NSObject
 
 /** id */
-@property (nonatomic, assign) NSInteger id;
+@property (nonatomic, assign) NSInteger ID;
 /** */
 @property (nonatomic, assign) NSInteger count;
 /** 名字 */

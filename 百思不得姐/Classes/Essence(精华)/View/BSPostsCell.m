@@ -9,20 +9,47 @@
 #import "BSPostsCell.h"
 #import "BSPosts.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "BSPostsContentPictureView.h"
 
 @interface BSPostsCell ()
+/** 头像 */
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *followBtn;
-@property (weak, nonatomic) IBOutlet UIButton *dingBtn;
-@property (weak, nonatomic) IBOutlet UIButton *caiBtn;
-@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
-@property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+/** 新浪+V */
 @property (weak, nonatomic) IBOutlet UIImageView *sina_vImageView;
+/** 名字 */
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+/** 时间 */
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+/** 内容 */
+@property (weak, nonatomic) IBOutlet UILabel *contentTextLabel;
+/** 关注 */
+@property (weak, nonatomic) IBOutlet UIButton *followBtn;
+/** 点赞 */
+@property (weak, nonatomic) IBOutlet UIButton *dingBtn;
+/** 点踩 */
+@property (weak, nonatomic) IBOutlet UIButton *caiBtn;
+/** 分享 */
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+/** 评论 */
+@property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+/** 图片帖子的内容视图 */
+@property (nonatomic, weak) BSPostsContentPictureView *contentPictureView;
 @end
 
 @implementation BSPostsCell
+
+/**
+ *  懒加载 图片帖子的内容 (保证只创建一次)
+ */
+-(BSPostsContentPictureView *)contentPictureView {
+
+    if(!_contentPictureView) {
+        BSPostsContentPictureView *contentPictureView = [BSPostsContentPictureView postsContentPictureView];
+        [self.contentView addSubview:contentPictureView];
+        _contentPictureView = contentPictureView;
+    }
+    return _contentPictureView;
+}
 
 -(void)awakeFromNib{
     
@@ -30,7 +57,7 @@
     
     // 设置 cell 的背景图片
     UIImageView *bgView = [[UIImageView alloc] init];
-    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    bgView.image        = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
 }
 
@@ -38,13 +65,14 @@
     
     _post = post;
     
+
     [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:post.profile_image]
                           placeholderImage:[UIImage imageNamed:@"cellFollowDisableIcon"]];
     
     self.sina_vImageView.hidden = !post.isSina_v;
-    
-    self.nameLabel.text = post.name;
-    self.timeLabel.text = post.create_time;
+    self.nameLabel.text         = post.name;
+    self.timeLabel.text         = post.create_time;
+    self.contentTextLabel.text  = post.text;
     
     [self.dingBtn setTitle:[NSString changeNumberIntoString:post.ding placeholer:@"赞"]
                   forState:(UIControlStateNormal)];
@@ -54,17 +82,25 @@
                    forState:(UIControlStateNormal)];
     [self.commentBtn setTitle:[NSString changeNumberIntoString:post.comment placeholer:@"评论"]
                      forState:(UIControlStateNormal)];
+    
+    // 根据帖子类型 添加内容视图
+    if (post.type == BSPostsTypePicture) { // 图片帖子
+        
+        self.contentPictureView.post = post;
+        self.contentPictureView.frame = post.contentPictureFrame;
+    }
 }
+
 
 /**
  *  设置 cell 的边距问题
  */
 -(void)setFrame:(CGRect)frame{
     
-    frame.origin.x = 10;
-    frame.origin.y += 10;
+    frame.origin.x = BSPostsCellMargin;
+    frame.origin.y += BSPostsCellMargin;
     frame.size.width -= 2 * frame.origin.x;
-    frame.size.height -= 10;
+    frame.size.height -= BSPostsCellMargin;
     
     [super setFrame:frame];
 }

@@ -7,8 +7,69 @@
 //
 
 #import "BSPosts.h"
+#import <MJExtension/MJExtension.h>
+
+@interface BSPosts ()
+
+@property (nonatomic, assign) CGFloat cellHeight;
+@property (nonatomic, assign) CGRect contentPictureFrame;
+
+@end
 
 @implementation BSPosts
+
+/**
+ *  属性名对应的 key 值
+ */
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{
+             @"small_image":@"image0",
+             @"large_image":@"image1",
+             @"middle_image":@"image2"
+             };
+}
+
+/**
+ *  计算 cell 的高度
+ */
+-(CGFloat)cellHeight {
+    
+    if (!_cellHeight) { // 当 cell 的高度没有时才计算，保证每个 cell 只计算一次
+        
+        // 文字的最大区域
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4*BSPostsCellMargin, MAXFLOAT);
+        // 文字的高度
+        CGFloat contentTextH = [self.text boundingRectWithSize:maxSize
+                                                       options:(NSStringDrawingUsesLineFragmentOrigin)
+                                                    attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}
+                                                       context:nil].size.height;
+        
+        // cell的基本高度 (文字的Y + 间距 + 文字的高度 + 间距 + 底部的工具条高度)
+        _cellHeight = BSPostsCellContentTextY + BSPostsCellMargin + contentTextH + BSPostsCellMargin + BSPostsCellBottomBarH;
+        
+        if (self.type == BSPostsTypePicture) { // 图片帖子内容
+            
+            // 图片等比例填充
+            CGFloat pictureW = maxSize.width; // 屏幕填充
+            CGFloat pictureH = self.height * pictureW / self.width; // 等比例高度
+            CGFloat pictureX = BSPostsCellMargin;
+            CGFloat pictureY = BSPostsCellContentTextY + contentTextH + BSPostsCellMargin;
+            
+            // 设置图片的最大高度
+            if (pictureH > BSPostsCellContentPictureMaxH) {
+                pictureH = BSPostsCellContentPictureBreakH;
+                self.bigPicture = YES; // 大图
+            }
+            
+            // 图片内容视图的 frame
+            self.contentPictureFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            // 图片帖子 cell 的高度
+            _cellHeight = _cellHeight +  pictureH + BSPostsCellMargin;
+        }
+    }
+    return _cellHeight;
+}
 
 /**
  *  设置创建时间的显示问题
@@ -16,42 +77,34 @@
 -(NSString *)create_time{
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    formatter.dateFormat       = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *createTime         = [formatter dateFromString:_create_time];
     
-    NSDate *createTime = [formatter dateFromString:_create_time];
-        
     if ([createTime isThisYear]) { // 今年
         
         if ([createTime isThisDay]) { // 今天
-            
             NSDateComponents *comps = [[NSDate date] deltaFrom:createTime]; // 获取当前时间和创建时间相差的各个元素
             
             if (comps.hour >= 1) { // 至少一个小时
-                
                 return [NSString stringWithFormat:@"%ld小时前", comps.hour];
                 
             }else if (comps.minute >= 1){ //  1分钟 < 创建时间 < 1小时
-                
                 return [NSString stringWithFormat:@"%ld分钟前", comps.minute];
                 
             }else{ // 小于一分钟
-                
                 return @"刚刚";
             }
             
         }else if ([createTime isThisYesterday]) { // 昨天
-            
             formatter.dateFormat = @"昨天 HH:mm:ss";
             return [formatter stringFromDate:createTime];
             
         }else{ // 其他
-            
             formatter.dateFormat = @"MM-dd HH:mm:ss";
             return [formatter stringFromDate:createTime];
         }
         
     }else { // 非今年
-        
         return _create_time;
     }
 

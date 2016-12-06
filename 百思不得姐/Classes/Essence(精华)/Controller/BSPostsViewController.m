@@ -18,13 +18,14 @@
 @interface BSPostsViewController ()
 
 /** 帖子数据 */
-@property (nonatomic, strong)  NSMutableArray *posts;
+@property (nonatomic, strong) NSMutableArray *posts;
 /** 当前页码 */
-@property (nonatomic, assign)  NSInteger page;
+@property (nonatomic, assign) NSInteger page;
 /** 当加载下一页数据时的参数 */
-@property (nonatomic, copy)  NSString *maxtime;
+@property (nonatomic, copy  ) NSString *maxtime;
 /** 保存当前请求的参数 */
 @property (nonatomic, strong) NSDictionary *params;
+
 @end
 
 @implementation BSPostsViewController
@@ -163,7 +164,8 @@ static NSString *const BSPostCellID = @"postsCell";
         // 字典转模型
         NSArray *newPosts = [BSPosts mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.posts addObjectsFromArray:newPosts];
-        
+        NSLog(@"%@", newPosts);
+
         // 刷新表格
         [self.tableView reloadData];
         
@@ -204,7 +206,23 @@ static NSString *const BSPostCellID = @"postsCell";
 
 #pragma mark UITableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    
+    
+    // 方式1: 自己计算 (该方式会多次调用,频繁的计算)
+    
+//    BSPosts *post = self.posts[indexPath.row];
+//    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4*BSPostsCellMargin, MAXFLOAT); // 文字的最大区域
+//    CGFloat contentTextH = [post.text boundingRectWithSize:maxSize
+//                                                   options:(NSStringDrawingUsesLineFragmentOrigin)
+//                                                attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}
+//                                                   context:nil].size.height; // 文字的高度
+//    CGFloat cellH = BSPostsCellContentTextY + contentTextH + BSPostsCellBottomBarH + 2*BSPostsCellMargin ;
+    
+    
+    // 方式2: 在模型中只计算一次高度就可以了
+    BSPosts *post = self.posts[indexPath.row];
+
+    return post.cellHeight;
 }
 
 
