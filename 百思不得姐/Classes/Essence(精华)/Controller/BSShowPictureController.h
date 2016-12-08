@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BSPosts;
 
 @interface BSShowPictureController : UIViewController
 
+/** 模型 */
+@property (nonatomic, strong) BSPosts *post;
 @end

@@ -63,4 +63,7 @@
 /** 图片是否过长 */
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 
+/** 图片加载的进度条 */
+@property (nonatomic, assign) CGFloat pictureProgress;
+
 @end

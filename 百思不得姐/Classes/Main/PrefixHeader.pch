@@ -27,6 +27,10 @@
 #define BSLog(...)
 #endif
 
+// 屏幕宽度
+#define MainWidth [UIScreen mainScreen].bounds.size.width
+#define MainHeight [UIScreen mainScreen].bounds.size.height
+
 
 // 打印函数
 #define BSLogFunc BSLog(@"%s", __func__)

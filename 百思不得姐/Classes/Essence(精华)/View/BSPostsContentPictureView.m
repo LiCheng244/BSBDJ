@@ -53,6 +53,7 @@
 -(void)showPicture {
     
     BSShowPictureController *showPictureVC = [[BSShowPictureController alloc] init];
+    showPictureVC.post                     = self.post;
     UIViewController *viewController       = [UIApplication sharedApplication].keyWindow.rootViewController;
     [viewController presentViewController:showPictureVC animated:YES completion:nil];
 }
@@ -62,13 +63,21 @@
     
     _post = post;
     
+    // 马上显示图片加载进度条(防止因为网速慢，导致显示其他图片的下载进度)
+    [self.progressView setProgress:post.pictureProgress animated:NO];
+    
     // 图片
     [self.pictureView sd_setImageWithURL:[NSURL URLWithString:post.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
         self.progressView.hidden = NO;
-        CGFloat progress         = 1.0*receivedSize/expectedSize;
-        [self.progressView setProgress:progress]; //进度条
-        self.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0f%%", progress*100];
+        
+        // 进度条值
+        post.pictureProgress     = 1.0*receivedSize/expectedSize;
+        [self.progressView setProgress:post.pictureProgress];
+        
+        // 圆圈中的值
+        NSString *text = [NSString stringWithFormat:@"%.0f%%", post.pictureProgress*100];
+        self.progressView.progressLabel.text = [text stringByReplacingOccurrencesOfString:@"-" withString:@""];
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;

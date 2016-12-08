@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSShowPictureController">
             <connections>
+                <outlet property="progressView" destination="elx-fp-uum" id="Fsr-G8-0CN"/>
+                <outlet property="scrollView" destination="cmh-gq-9yV" id="wRo-6u-fhU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,26 +21,93 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW8-R6-bqe">
-                    <rect key="frame" x="20" y="40" width="65" height="22"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-gq-9yV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elx-fp-uum" customClass="DALabeledCircularProgressView">
+                            <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="Wzu-wx-5pi"/>
+                                <constraint firstAttribute="width" constant="100" id="c45-4X-qmU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="width" constant="65" id="6u8-BG-ouG"/>
-                        <constraint firstAttribute="height" constant="22" id="AAT-e4-303"/>
+                        <constraint firstItem="elx-fp-uum" firstAttribute="centerY" secondItem="cmh-gq-9yV" secondAttribute="centerY" id="WtS-Mw-Y8p"/>
+                        <constraint firstItem="elx-fp-uum" firstAttribute="centerX" secondItem="cmh-gq-9yV" secondAttribute="centerX" id="YbG-YI-nUA"/>
                     </constraints>
-                    <state key="normal" title="返回">
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfE-iO-s4a" userLabel="保存">
+                    <rect key="frame" x="305" y="617" width="50" height="30"/>
+                    <color key="backgroundColor" red="0.49878400000000001" green="0.50512800000000002" blue="0.50499899999999998" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6YU-ON-0r1"/>
+                        <constraint firstAttribute="width" constant="50" id="x8g-ew-Hfv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="保存"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveClick:" destination="-1" eventType="touchUpInside" id="5u8-RC-beW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCQ-yJ-bHc" userLabel="转发">
+                    <rect key="frame" x="245" y="617" width="50" height="30"/>
+                    <color key="backgroundColor" red="0.49878400000000001" green="0.50512800000000002" blue="0.50499899999999998" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="CwW-kD-1NA"/>
+                        <constraint firstAttribute="width" constant="50" id="evh-MB-Ol0"/>
+                    </constraints>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" red="0.94901960780000005" green="0.95294117649999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="shareClick:" destination="-1" eventType="touchUpInside" id="uYg-JF-pyN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU4-jt-7Oq" userLabel="返回">
+                    <rect key="frame" x="20" y="35" width="46" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="R1v-li-SWr"/>
+                        <constraint firstAttribute="height" constant="35" id="YFv-sI-1zA"/>
+                    </constraints>
+                    <state key="normal" image="show_image_back_icon">
                         <color key="titleColor" red="0.94901960780000005" green="0.95294117649999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="4da-Ne-Pwy"/>
+                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="AwM-gV-8Ld"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.21199999750000001" green="0.20399999620000001" blue="0.18000000720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="IW8-R6-bqe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="df8-dk-153"/>
-                <constraint firstItem="IW8-R6-bqe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ycB-60-N9a"/>
+                <constraint firstItem="tfE-iO-s4a" firstAttribute="leading" secondItem="GCQ-yJ-bHc" secondAttribute="trailing" constant="10" id="8Nj-5u-jrr"/>
+                <constraint firstAttribute="trailing" secondItem="cmh-gq-9yV" secondAttribute="trailing" id="O3g-ER-sFa"/>
+                <constraint firstAttribute="bottom" secondItem="tfE-iO-s4a" secondAttribute="bottom" constant="20" id="OST-sG-O8r"/>
+                <constraint firstAttribute="bottom" secondItem="cmh-gq-9yV" secondAttribute="bottom" id="SA9-UH-8aR"/>
+                <constraint firstItem="vU4-jt-7Oq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="kXX-of-Kac"/>
+                <constraint firstItem="vU4-jt-7Oq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="nlD-aq-x5t"/>
+                <constraint firstItem="cmh-gq-9yV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rps-3R-NJ3"/>
+                <constraint firstItem="cmh-gq-9yV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vzw-TZ-55N"/>
+                <constraint firstAttribute="bottom" secondItem="GCQ-yJ-bHc" secondAttribute="bottom" constant="20" id="wYv-J8-kFM"/>
+                <constraint firstAttribute="trailing" secondItem="tfE-iO-s4a" secondAttribute="trailing" constant="20" id="yNs-Np-Rg6"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
 </document>
