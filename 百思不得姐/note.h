@@ -1,9 +1,26 @@
 
 //----------------------- 笔 记 -----------------------
 
+
 /**
- *      
+ *      block 的定义：
+ 
+    1. 在参数中： (void (^)())completionBlock
+    2. @propery (nonatomic, copy) void (^completionBlock)();
  */
+
+
+/**
+ *      pop 与 core animation 的区别 (poping是 pop 的示例程序)
+ 
+    1. core animation 的动画只能添加到 layer 上
+    2. pop 的动画能添加到任何对象上
+    3. pop 的底层不是基于 core animation, 而是基于 CADisplayLink 的
+    4. pop 对 frame 的修改是真正的改变了 view 的 frame， 即使 view 没有设置 frame，在做动画时设置了 frame 也是有效的 （实时修改对象的属性，真正修改）
+    5. core animation 虽然通过动画修改 frame， 但是最终的 frame 是没有改变的 （仅仅是表象，不会真正修改 frame，size 等等）
+ */
+
+
 
 /**
  *      运行时(Runtime)

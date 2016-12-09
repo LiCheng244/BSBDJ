@@ -164,7 +164,6 @@ static NSString *const BSPostCellID = @"postsCell";
         // 字典转模型
         NSArray *newPosts = [BSPosts mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.posts addObjectsFromArray:newPosts];
-        NSLog(@"%@", newPosts);
 
         // 刷新表格
         [self.tableView reloadData];

@@ -7,6 +7,7 @@
 //
 
 #import "BSTabBar.h"
+#import "BSPublishViewController.h"
 
 @interface BSTabBar()
 
@@ -32,6 +33,8 @@
         
         [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"]
                     forState:(UIControlStateNormal)];
+        [publishBtn addTarget:self action:@selector(publishClick)
+             forControlEvents:(UIControlEventTouchUpInside)];
         [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"]
                     forState:(UIControlStateHighlighted)];
 
@@ -44,6 +47,12 @@
     return self;
 }
 
+- (void)publishClick {
+    
+    BSPublishViewController *publishVC = [[BSPublishViewController alloc] init];
+    [viewVC presentViewController:publishVC animated:NO completion:nil];
+    
+}
 /**
  *  重新布局子控件
  */

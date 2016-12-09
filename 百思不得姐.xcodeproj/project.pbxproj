@@ -15,6 +15,9 @@
 		5A44515C1DDAE909003689B6 /* BSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44515B1DDAE909003689B6 /* BSPushGuideView.m */; };
 		5A44515E1DDAE912003689B6 /* BSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A44515D1DDAE912003689B6 /* BSPushGuideView.xib */; };
 		5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */; };
+		5A72077B1DF9393100E35C17 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A72077A1DF9393100E35C17 /* UIImage+Extension.m */; };
+		5A7207831DF93AC000E35C17 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7207811DF93AC000E35C17 /* BSPublishViewController.m */; };
+		5A7207841DF93AC000E35C17 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7207821DF93AC000E35C17 /* BSPublishViewController.xib */; };
 		5A76642D1DCC31C00040DB19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A76642C1DCC31C00040DB19 /* main.m */; };
 		5A7664381DCC31C00040DB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7664371DCC31C00040DB19 /* Assets.xcassets */; };
 		5A7664461DCC31C00040DB19 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7664451DCC31C00040DB19 /* _____Tests.m */; };
@@ -85,6 +88,11 @@
 		5A44515D1DDAE912003689B6 /* BSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPushGuideView.xib; sourceTree = "<group>"; };
 		5A62E6CE1DCC648A00FAFBC5 /* note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = note.h; sourceTree = "<group>"; };
 		5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		5A7207791DF9393100E35C17 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		5A72077A1DF9393100E35C17 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		5A7207801DF93AC000E35C17 /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
+		5A7207811DF93AC000E35C17 /* BSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishViewController.m; sourceTree = "<group>"; };
+		5A7207821DF93AC000E35C17 /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
 		5A7664281DCC31C00040DB19 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A76642C1DCC31C00040DB19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A7664371DCC31C00040DB19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +244,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5A72077C1DF93AA400E35C17 /* Publish(发布) */ = {
+			isa = PBXGroup;
+			children = (
+				5A72077D1DF93AA400E35C17 /* Controller */,
+				5A72077E1DF93AA400E35C17 /* Model */,
+				5A72077F1DF93AA400E35C17 /* View */,
+			);
+			path = "Publish(发布)";
+			sourceTree = "<group>";
+		};
+		5A72077D1DF93AA400E35C17 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A7207801DF93AC000E35C17 /* BSPublishViewController.h */,
+				5A7207811DF93AC000E35C17 /* BSPublishViewController.m */,
+				5A7207821DF93AC000E35C17 /* BSPublishViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5A72077E1DF93AA400E35C17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5A72077F1DF93AA400E35C17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5A76641F1DCC31C00040DB19 = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +346,7 @@
 				5A8AB1D41DD98D7F007E3E90 /* Login(登录) */,
 				5A7664631DCC34E10040DB19 /* Essence(精华) */,
 				5A7664841DCC34E10040DB19 /* New(新帖) */,
+				5A72077C1DF93AA400E35C17 /* Publish(发布) */,
 				5A7664691DCC34E10040DB19 /* FriendTrends(关注) */,
 				5A76647E1DCC34E10040DB19 /* Me(我) */,
 				5A76648A1DCC34E10040DB19 /* Other(其他) */,
@@ -531,6 +574,8 @@
 		5A76648B1DCC34E10040DB19 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5A7207791DF9393100E35C17 /* UIImage+Extension.h */,
+				5A72077A1DF9393100E35C17 /* UIImage+Extension.m */,
 				5A76648C1DCC34E10040DB19 /* UIView+BSFrame.h */,
 				5A76648D1DCC34E10040DB19 /* UIView+BSFrame.m */,
 				5AD0EC9C1DF51B61004B494E /* NSString+Custom.h */,
@@ -704,6 +749,7 @@
 				5A8B4F811DCC8601009DFC50 /* BSRecommendCategoryCell.xib in Resources */,
 				5AD0ECA91DF570E6004B494E /* BSPostsCell.xib in Resources */,
 				5A44515E1DDAE912003689B6 /* BSPushGuideView.xib in Resources */,
+				5A7207841DF93AC000E35C17 /* BSPublishViewController.xib in Resources */,
 				5A8B4F711DCC797B009DFC50 /* BSRecommendViewController.xib in Resources */,
 				5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */,
 				5A8AB1DC1DD98DA6007E3E90 /* BSLoginRegisterViewController.xib in Resources */,
@@ -785,6 +831,7 @@
 				5AD0ECA11DF5496D004B494E /* NSDate+Extension.m in Sources */,
 				5A8B4F801DCC8601009DFC50 /* BSRecommendCategoryCell.m in Sources */,
 				5ACB812B1DF66FEB00FFA1E6 /* BSPostsContentPictureView.m in Sources */,
+				5A7207831DF93AC000E35C17 /* BSPublishViewController.m in Sources */,
 				5A1D9A301DCF01FE002A5F59 /* BSRecommendUsersCell.m in Sources */,
 				5AAD97531DF1648B000B7389 /* BSConstant.m in Sources */,
 				5A8B4F701DCC797B009DFC50 /* BSRecommendViewController.m in Sources */,
@@ -803,6 +850,7 @@
 				5A7664961DCC34E10040DB19 /* BSNewViewController.m in Sources */,
 				5A8AB1DB1DD98DA6007E3E90 /* BSLoginRegisterViewController.m in Sources */,
 				5ACB81361DF6B10D00FFA1E6 /* BSShowPictureController.m in Sources */,
+				5A72077B1DF9393100E35C17 /* UIImage+Extension.m in Sources */,
 				5A1D9A341DCF0428002A5F59 /* BSRecommendUser.m in Sources */,
 				5A76648F1DCC34E10040DB19 /* BSFriendTrendsViewController.m in Sources */,
 				5A7664931DCC34E10040DB19 /* BSTabBar.m in Sources */,

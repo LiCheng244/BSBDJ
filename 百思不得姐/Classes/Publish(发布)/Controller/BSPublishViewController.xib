@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSPublishViewController">
+            <connections>
+                <outlet property="cancelBtn" destination="ptA-BL-lSH" id="hc1-dx-UAQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareBottomBackground" translatesAutoresizingMaskIntoConstraints="NO" id="OnH-YU-5Nf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-BL-lSH">
+                    <rect key="frame" x="87.5" y="597" width="200" height="35"/>
+                    <color key="backgroundColor" red="0.87476738939999998" green="1" blue="0.74192922719999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="jc6-1O-QVr"/>
+                        <constraint firstAttribute="height" constant="35" id="suq-bo-kQf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="0.49878400000000001" green="0.50512800000000002" blue="0.50499899999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" red="0.49878400000000001" green="0.50512800000000002" blue="0.50499899999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancelClick" destination="-1" eventType="touchUpInside" id="Wh9-o1-Ehk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OnH-YU-5Nf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TxF-VK-0ZA"/>
+                <constraint firstAttribute="trailing" secondItem="OnH-YU-5Nf" secondAttribute="trailing" id="Uf3-u7-EPC"/>
+                <constraint firstAttribute="bottom" secondItem="OnH-YU-5Nf" secondAttribute="bottom" id="akm-TD-5ac"/>
+                <constraint firstItem="ptA-BL-lSH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="i4J-so-frl"/>
+                <constraint firstAttribute="bottom" secondItem="ptA-BL-lSH" secondAttribute="bottom" constant="35" id="vp1-hY-1sF"/>
+                <constraint firstItem="OnH-YU-5Nf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y7G-PC-fR1"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="shareBottomBackground" width="320" height="343"/>
+    </resources>
+</document>

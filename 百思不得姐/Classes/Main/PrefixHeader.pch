@@ -14,6 +14,8 @@
 #import "NSString+Custom.h"
 #import "UIBarButtonItem+BSExtension.h"
 #import "NSDate+Extension.h"
+#import "UIImage+Extension.h"
+
 
 #import "BSConstant.h"
 
@@ -31,6 +33,8 @@
 #define MainWidth [UIScreen mainScreen].bounds.size.width
 #define MainHeight [UIScreen mainScreen].bounds.size.height
 
+// 在 view 中获得的控制器
+#define viewVC [UIApplication sharedApplication].keyWindow.rootViewController
 
 // 打印函数
 #define BSLogFunc BSLog(@"%s", __func__)

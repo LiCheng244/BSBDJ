@@ -54,8 +54,7 @@
     
     BSShowPictureController *showPictureVC = [[BSShowPictureController alloc] init];
     showPictureVC.post                     = self.post;
-    UIViewController *viewController       = [UIApplication sharedApplication].keyWindow.rootViewController;
-    [viewController presentViewController:showPictureVC animated:YES completion:nil];
+    [viewVC presentViewController:showPictureVC animated:YES completion:nil];
 }
 
 
@@ -81,6 +80,23 @@
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
+        
+        if (post.isBigPicture) { // 只有大图才进行裁剪
+            
+            // 开启图形上下文
+            UIGraphicsBeginImageContextWithOptions(post.contentPictureFrame.size, YES, 0.0);
+            
+            // 将下载的图片对象绘制到图形上下文
+            CGFloat width = post.contentPictureFrame.size.width;
+            CGFloat height = width * post.height / post.width;
+            [image drawInRect:CGRectMake(0, 0, width, height)];
+            
+            // 获得图片
+            self.pictureView.image = UIGraphicsGetImageFromCurrentImageContext();
+            
+            // 结束上下文
+            UIGraphicsEndImageContext();
+        }
     }];
     
     // gif (利用扩展名来判断，sdwebimage使用图片date的第一个字节来判断的)
@@ -90,7 +106,7 @@
     // 查看全部按钮
     if (post.isBigPicture) { // 大图
         self.totalPictureBtn.hidden    = NO;
-        self.pictureView.contentMode   = UIViewContentModeScaleAspectFill;
+        self.pictureView.contentMode   = UIViewContentModeScaleAspectFill; // 等比例伸缩
         self.pictureView.clipsToBounds = YES;
         
     }else{
