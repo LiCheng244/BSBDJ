@@ -54,7 +54,7 @@
     
     BSShowPictureController *showPictureVC = [[BSShowPictureController alloc] init];
     showPictureVC.post                     = self.post;
-    [viewVC presentViewController:showPictureVC animated:YES completion:nil];
+    [BSRootViewVC presentViewController:showPictureVC animated:YES completion:nil];
 }
 
 

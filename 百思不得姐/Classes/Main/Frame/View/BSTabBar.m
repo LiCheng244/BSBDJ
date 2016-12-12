@@ -8,6 +8,8 @@
 
 #import "BSTabBar.h"
 #import "BSPublishViewController.h"
+#import "BSPublishView.h"
+
 
 @interface BSTabBar()
 
@@ -49,10 +51,18 @@
 
 - (void)publishClick {
     
-    BSPublishViewController *publishVC = [[BSPublishViewController alloc] init];
-    [viewVC presentViewController:publishVC animated:NO completion:nil];
     
+   
+    // 方法1 ： 使用控制器 （没有半透明效果）
+//    BSPublishViewController *publishVC = [[BSPublishViewController alloc] init];
+//    [BSViewVC presentViewController:publishVC animated:NO completion:nil];
+    
+    // 方法2 : 使用窗口来实现
+    // 显示发布窗口 （有半透明效果）
+    [BSPublishView show];
 }
+
+
 /**
  *  重新布局子控件
  */

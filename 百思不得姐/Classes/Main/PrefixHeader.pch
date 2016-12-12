@@ -26,15 +26,18 @@
 #ifdef DEBUG
 #define BSLog(...) NSLog(__VA_ARGS__)
 #else
-#define BSLog(...)
+#define NSLog(...)
 #endif
 
 // 屏幕宽度
 #define MainWidth [UIScreen mainScreen].bounds.size.width
 #define MainHeight [UIScreen mainScreen].bounds.size.height
+#define MainBounds [UIScreen mainScreen].bounds
 
+// 根视图
+#define BSkeyWindow [UIApplication sharedApplication].keyWindow
 // 在 view 中获得的控制器
-#define viewVC [UIApplication sharedApplication].keyWindow.rootViewController
+#define BSRootViewVC [UIApplication sharedApplication].keyWindow.rootViewController
 
 // 打印函数
 #define BSLogFunc BSLog(@"%s", __func__)
