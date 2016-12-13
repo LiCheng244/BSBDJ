@@ -35,3 +35,8 @@ UIKIT_EXTERN CGFloat const BSPostsCellContentPictureMaxH;
 /** 精华-cell-图片帖子内容一旦超过最大高度，就是使用该高度 */
 UIKIT_EXTERN CGFloat const BSPostsCellContentPictureBreakH;
 
+/** BSUser模型 性别属性值 - 男 */
+UIKIT_EXTERN NSString * const BSUserMale;
+/** BSUser模型 性别属性值 - 女 */
+UIKIT_EXTERN NSString * const BSUserFemale;
+

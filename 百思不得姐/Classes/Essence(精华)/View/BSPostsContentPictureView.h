@@ -17,5 +17,5 @@
 
 
 /** 初始化 view */
-+ (BSPostsContentPictureView *)postsContentPictureView;
++ (instancetype)postsContentPictureView;
 @end

@@ -10,8 +10,16 @@
 #import "BSPosts.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "BSPostsContentPictureView.h"
+#import "BSPostsContentVoiceView.h"
+#import "BSPostsContentVideoView.h"
+#import "BSComment.h"
+#import "BSUser.h"
 
 @interface BSPostsCell ()
+/** 热门评论内容 */
+@property (weak, nonatomic) IBOutlet UILabel *postCommentL;
+/** 热门评论 view */
+@property (weak, nonatomic) IBOutlet UIView *commentView;
 /** 头像 */
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 /** 新浪+V */
@@ -32,8 +40,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 /** 评论 */
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+
 /** 图片帖子的内容视图 */
 @property (nonatomic, weak) BSPostsContentPictureView *contentPictureView;
+/** 声音帖子的内容视图 */
+@property (nonatomic, weak) BSPostsContentVoiceView *contentVoiceView;
+/** 声音帖子的内容视图 */
+@property (nonatomic, weak) BSPostsContentVideoView *contentVideoView;
 @end
 
 @implementation BSPostsCell
@@ -49,6 +62,28 @@
         _contentPictureView = contentPictureView;
     }
     return _contentPictureView;
+}
+/**
+ *  懒加载 声音帖子的内容 (保证只创建一次)
+ */
+-(BSPostsContentVoiceView *)contentVoiceView{
+    
+    if(!_contentVoiceView) {
+        BSPostsContentVoiceView *contentVoiceView = [BSPostsContentVoiceView postsContentVoiceView];
+        [self.contentView addSubview:contentVoiceView];
+        _contentVoiceView = contentVoiceView;
+    }
+    return _contentVoiceView;
+}/**
+  *  懒加载 声音帖子的内容 (保证只创建一次)
+  */
+-(BSPostsContentVideoView *)contentVideoView{
+    if(!_contentVideoView) {
+        BSPostsContentVideoView *contentVideoView = [BSPostsContentVideoView postContentVideoView];
+        [self.contentView addSubview:contentVideoView];
+        _contentVideoView = contentVideoView;
+    }
+    return _contentVideoView;
 }
 
 -(void)awakeFromNib{
@@ -85,9 +120,43 @@
     
     // 根据帖子类型 添加内容视图
     if (post.type == BSPostsTypePicture) { // 图片帖子
-        
         self.contentPictureView.post = post;
         self.contentPictureView.frame = post.contentPictureFrame;
+        // 防止循环利用
+        self.contentPictureView.hidden = NO;
+        self.contentVideoView.hidden = YES;
+        self.contentVoiceView.hidden = YES;
+        
+    } else if (post.type == BSPostsTypeVoice) { // 声音帖子
+        self.contentVoiceView.post = post;
+        self.contentVoiceView.frame = post.contentVoiceFrame;
+        // 防止循环利用
+        self.contentVoiceView.hidden = NO;
+        self.contentPictureView.hidden = YES;
+        self.contentVideoView.hidden = YES;
+
+        
+    }else if (post.type == BSPostsTypeVideo) { // 视频帖子
+        self.contentVideoView.post = post;
+        self.contentVideoView.frame = post.contentVideoFrame;
+        // 防止循环利用
+        self.contentVideoView.hidden = NO;
+        self.contentPictureView.hidden = YES;
+        self.contentVoiceView.hidden = YES;
+        
+    }else{ // 段子帖子
+        self.contentVideoView.hidden = YES;
+        self.contentPictureView.hidden = YES;
+        self.contentVoiceView.hidden = YES;
+    }
+    
+    // 最热评论
+    BSComment *top_cmt = [post.top_cmt firstObject];
+    if (top_cmt) {
+        self.commentView.hidden = NO;
+        self.postCommentL.text = [NSString stringWithFormat:@"%@ : %@", top_cmt.user.username, top_cmt.content];
+    }else{
+        self.commentView.hidden = YES;
     }
 }
 

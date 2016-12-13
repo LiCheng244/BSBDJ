@@ -17,6 +17,11 @@ CGFloat const BSPostsCellBottomBarH = 44;
 
 /** 精华-cell-图片帖子内容的最大高度 */
 CGFloat const BSPostsCellContentPictureMaxH = 1000;
-
 /** 精华-cell-图片帖子内容一旦超过最大高度，就是使用该高度 */
 CGFloat const BSPostsCellContentPictureBreakH = 400;
+
+
+/** BSUser模型 性别属性值 - 男 */
+NSString * const BSUserMale = @"m";
+/** BSUser模型 性别属性值 - 女 */
+NSString * const BSUserFemale = @"f";

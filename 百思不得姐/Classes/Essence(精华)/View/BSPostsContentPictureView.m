@@ -27,7 +27,7 @@
 @implementation BSPostsContentPictureView
 
 
-+ (BSPostsContentPictureView *)postsContentPictureView {
++ (instancetype)postsContentPictureView {
     
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
 }

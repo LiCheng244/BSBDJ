@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BSComment;
 
 @interface BSPosts : NSObject
 
@@ -53,6 +54,17 @@
 /** 帖子的类型 */
 @property (nonatomic, assign) BSPostsType type;
 
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 时长 */
+@property (nonatomic, assign) NSInteger videotime;
+
+/** 最热评论数组(数组元素为：BSComment) */
+@property (nonatomic, strong) NSArray *top_cmt;
+
+
 
 
 #pragma mark - <辅助的属性>
@@ -65,5 +77,12 @@
 
 /** 图片加载的进度条 */
 @property (nonatomic, assign) CGFloat pictureProgress;
+
+
+/** 声音帖子的 frame */
+@property (nonatomic, assign, readonly) CGRect contentVoiceFrame;
+
+/** 视频帖子的 frame */
+@property (nonatomic, assign, readonly) CGRect contentVideoFrame;
 
 @end

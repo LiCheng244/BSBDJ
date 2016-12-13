@@ -108,7 +108,7 @@ static NSString *const BSPostCellID = @"postsCell";
     [[AFHTTPSessionManager manager] GET:BSBaseAPI parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         // 说明当前请求不是最后一个请求
-        if (self.params != params) return ;
+        if (self.params != params) return;
         
         
         // 存入 maxtime

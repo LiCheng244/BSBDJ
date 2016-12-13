@@ -15,6 +15,14 @@
 		5A44515C1DDAE909003689B6 /* BSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44515B1DDAE909003689B6 /* BSPushGuideView.m */; };
 		5A44515E1DDAE912003689B6 /* BSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A44515D1DDAE912003689B6 /* BSPushGuideView.xib */; };
 		5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */; };
+		5A70C1F51DFF90AD00773304 /* BSPostsContentVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C1F41DFF90AD00773304 /* BSPostsContentVoiceView.m */; };
+		5A70C1F71DFF90B700773304 /* BSPostsContentVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A70C1F61DFF90B700773304 /* BSPostsContentVoiceView.xib */; };
+		5A70C2071DFFA75D00773304 /* BSPostsContentVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C2061DFFA75D00773304 /* BSPostsContentVideoView.m */; };
+		5A70C2091DFFA76B00773304 /* BSPostsContentVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A70C2081DFFA76B00773304 /* BSPostsContentVideoView.xib */; };
+		5A70C20C1DFFCA6700773304 /* BSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C20B1DFFCA6700773304 /* BSComment.m */; };
+		5A70C20F1DFFCA8B00773304 /* BSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C20E1DFFCA8B00773304 /* BSUser.m */; };
+		5A70C2121DFFCF2700773304 /* BSPostsCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A70C2111DFFCF2700773304 /* BSPostsCommentView.m */; };
+		5A70C2141DFFCF3400773304 /* BSPostsCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A70C2131DFFCF3400773304 /* BSPostsCommentView.xib */; };
 		5A72077B1DF9393100E35C17 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A72077A1DF9393100E35C17 /* UIImage+Extension.m */; };
 		5A7207831DF93AC000E35C17 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7207811DF93AC000E35C17 /* BSPublishViewController.m */; };
 		5A7207841DF93AC000E35C17 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7207821DF93AC000E35C17 /* BSPublishViewController.xib */; };
@@ -90,6 +98,19 @@
 		5A44515D1DDAE912003689B6 /* BSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPushGuideView.xib; sourceTree = "<group>"; };
 		5A62E6CE1DCC648A00FAFBC5 /* note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = note.h; sourceTree = "<group>"; };
 		5A62E6CF1DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		5A70C1F31DFF90AD00773304 /* BSPostsContentVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPostsContentVoiceView.h; sourceTree = "<group>"; };
+		5A70C1F41DFF90AD00773304 /* BSPostsContentVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPostsContentVoiceView.m; sourceTree = "<group>"; };
+		5A70C1F61DFF90B700773304 /* BSPostsContentVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPostsContentVoiceView.xib; sourceTree = "<group>"; };
+		5A70C2051DFFA75D00773304 /* BSPostsContentVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPostsContentVideoView.h; sourceTree = "<group>"; };
+		5A70C2061DFFA75D00773304 /* BSPostsContentVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPostsContentVideoView.m; sourceTree = "<group>"; };
+		5A70C2081DFFA76B00773304 /* BSPostsContentVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPostsContentVideoView.xib; sourceTree = "<group>"; };
+		5A70C20A1DFFCA6700773304 /* BSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSComment.h; sourceTree = "<group>"; };
+		5A70C20B1DFFCA6700773304 /* BSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSComment.m; sourceTree = "<group>"; };
+		5A70C20D1DFFCA8B00773304 /* BSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUser.h; sourceTree = "<group>"; };
+		5A70C20E1DFFCA8B00773304 /* BSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUser.m; sourceTree = "<group>"; };
+		5A70C2101DFFCF2700773304 /* BSPostsCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPostsCommentView.h; sourceTree = "<group>"; };
+		5A70C2111DFFCF2700773304 /* BSPostsCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPostsCommentView.m; sourceTree = "<group>"; };
+		5A70C2131DFFCF3400773304 /* BSPostsCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPostsCommentView.xib; sourceTree = "<group>"; };
 		5A7207791DF9393100E35C17 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		5A72077A1DF9393100E35C17 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		5A7207801DF93AC000E35C17 /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
@@ -395,6 +416,10 @@
 				5A8AB1CA1DD95FE3007E3E90 /* BSRecommendTag.m */,
 				5ACA98511DF021600063BC43 /* BSPosts.h */,
 				5ACA98521DF021600063BC43 /* BSPosts.m */,
+				5A70C20A1DFFCA6700773304 /* BSComment.h */,
+				5A70C20B1DFFCA6700773304 /* BSComment.m */,
+				5A70C20D1DFFCA8B00773304 /* BSUser.h */,
+				5A70C20E1DFFCA8B00773304 /* BSUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,6 +436,15 @@
 				5ACB81291DF66FEA00FFA1E6 /* BSPostsContentPictureView.h */,
 				5ACB812A1DF66FEB00FFA1E6 /* BSPostsContentPictureView.m */,
 				5ACB812C1DF66FF700FFA1E6 /* BSPostsContentPictureView.xib */,
+				5A70C1F31DFF90AD00773304 /* BSPostsContentVoiceView.h */,
+				5A70C1F41DFF90AD00773304 /* BSPostsContentVoiceView.m */,
+				5A70C1F61DFF90B700773304 /* BSPostsContentVoiceView.xib */,
+				5A70C2051DFFA75D00773304 /* BSPostsContentVideoView.h */,
+				5A70C2061DFFA75D00773304 /* BSPostsContentVideoView.m */,
+				5A70C2081DFFA76B00773304 /* BSPostsContentVideoView.xib */,
+				5A70C2101DFFCF2700773304 /* BSPostsCommentView.h */,
+				5A70C2111DFFCF2700773304 /* BSPostsCommentView.m */,
+				5A70C2131DFFCF3400773304 /* BSPostsCommentView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -753,14 +787,17 @@
 				5ACB812D1DF66FF700FFA1E6 /* BSPostsContentPictureView.xib in Resources */,
 				5ACB81371DF6B10D00FFA1E6 /* BSShowPictureController.xib in Resources */,
 				5A8AB1D31DD9617A007E3E90 /* BSRecommendTagCell.xib in Resources */,
+				5A70C2141DFFCF3400773304 /* BSPostsCommentView.xib in Resources */,
 				5A62E6D01DCC6A8800FAFBC5 /* BSFriendTrendsViewController.xib in Resources */,
 				5A8B4F811DCC8601009DFC50 /* BSRecommendCategoryCell.xib in Resources */,
 				5AD0ECA91DF570E6004B494E /* BSPostsCell.xib in Resources */,
+				5A70C1F71DFF90B700773304 /* BSPostsContentVoiceView.xib in Resources */,
 				5A44515E1DDAE912003689B6 /* BSPushGuideView.xib in Resources */,
 				5A7207841DF93AC000E35C17 /* BSPublishViewController.xib in Resources */,
 				5AECF0981DFE3CE200C422AC /* BSPublishView.xib in Resources */,
 				5A8B4F711DCC797B009DFC50 /* BSRecommendViewController.xib in Resources */,
 				5A1D9A311DCF01FE002A5F59 /* BSRecommendUsersCell.xib in Resources */,
+				5A70C2091DFFA76B00773304 /* BSPostsContentVideoView.xib in Resources */,
 				5A8AB1DC1DD98DA6007E3E90 /* BSLoginRegisterViewController.xib in Resources */,
 				5A7664381DCC31C00040DB19 /* Assets.xcassets in Resources */,
 			);
@@ -844,18 +881,22 @@
 				5A1D9A301DCF01FE002A5F59 /* BSRecommendUsersCell.m in Sources */,
 				5AAD97531DF1648B000B7389 /* BSConstant.m in Sources */,
 				5A8B4F701DCC797B009DFC50 /* BSRecommendViewController.m in Sources */,
+				5A70C20F1DFFCA8B00773304 /* BSUser.m in Sources */,
 				5A8AB1CB1DD95FE3007E3E90 /* BSRecommendTag.m in Sources */,
+				5A70C2121DFFCF2700773304 /* BSPostsCommentView.m in Sources */,
 				5A8AB1D21DD9617A007E3E90 /* BSRecommendTagCell.m in Sources */,
 				5AD0EC9E1DF51B61004B494E /* NSString+Custom.m in Sources */,
 				5A7664901DCC34E10040DB19 /* AppDelegate.m in Sources */,
 				5AECF0961DFE3CDB00C422AC /* BSPublishView.m in Sources */,
 				5A76648E1DCC34E10040DB19 /* BSEssenceViewController.m in Sources */,
 				5AD0ECA81DF570E6004B494E /* BSPostsCell.m in Sources */,
+				5A70C20C1DFFCA6700773304 /* BSComment.m in Sources */,
 				5A8AB1DF1DD99B07007E3E90 /* BSVerticalButton.m in Sources */,
 				5A7664971DCC34E10040DB19 /* UIView+BSFrame.m in Sources */,
 				5A44515C1DDAE909003689B6 /* BSPushGuideView.m in Sources */,
 				5A7664921DCC34E10040DB19 /* BSTabBarController.m in Sources */,
 				5A7664941DCC34E10040DB19 /* UIBarButtonItem+BSExtension.m in Sources */,
+				5A70C1F51DFF90AD00773304 /* BSPostsContentVoiceView.m in Sources */,
 				5A4451501DDAAE04003689B6 /* BSLoginTextFiled.m in Sources */,
 				5A7664961DCC34E10040DB19 /* BSNewViewController.m in Sources */,
 				5A8AB1DB1DD98DA6007E3E90 /* BSLoginRegisterViewController.m in Sources */,
@@ -865,6 +906,7 @@
 				5A76648F1DCC34E10040DB19 /* BSFriendTrendsViewController.m in Sources */,
 				5A7664931DCC34E10040DB19 /* BSTabBar.m in Sources */,
 				5A76642D1DCC31C00040DB19 /* main.m in Sources */,
+				5A70C2071DFFA75D00773304 /* BSPostsContentVideoView.m in Sources */,
 				5A7664911DCC34E10040DB19 /* BSNavigationController.m in Sources */,
 				5AD0ECA41DF56DAF004B494E /* BSPostsViewController.m in Sources */,
 				5A86B7521DD95D000061E14A /* BSRecommendTagsViewController.m in Sources */,

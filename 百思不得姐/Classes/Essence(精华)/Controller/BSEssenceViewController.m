@@ -142,7 +142,7 @@
             
             // 让按钮内部的 label 根据文字内容来计算尺寸
             [button.titleLabel sizeToFit];
-            self.indicatorView.bs_centerX = button.bs_centerX;
+            self.indicatorView.bs_x = (button.bs_width- button.titleLabel.bs_width) / 2;
             self.indicatorView.bs_width   = button.titleLabel.bs_width;
         }
     }

@@ -8,11 +8,17 @@
 
 #import "BSPosts.h"
 #import <MJExtension/MJExtension.h>
+#import "BSComment.h"
+#import "BSUser.h"
 
 @interface BSPosts ()
 
 @property (nonatomic, assign) CGFloat cellHeight;
 @property (nonatomic, assign) CGRect contentPictureFrame;
+@property (nonatomic, assign) CGRect contentVoiceFrame;
+@property (nonatomic, assign) CGRect contentVideoFrame;
+
+
 
 @end
 
@@ -28,6 +34,15 @@
              @"middle_image":@"image2"
              };
 }
+
+
+/**
+ *  指定数组中存放的元素模型
+ */
++(NSDictionary *)mj_objectClassInArray{
+    return @{@"top_cmt":[BSComment class]};
+}
+
 
 /**
  *  计算 cell 的高度
@@ -54,22 +69,56 @@
             CGFloat pictureH = self.height * pictureW / self.width; // 等比例高度
             CGFloat pictureX = BSPostsCellMargin;
             CGFloat pictureY = BSPostsCellContentTextY + contentTextH + BSPostsCellMargin;
-            
             // 设置图片的最大高度
             if (pictureH > BSPostsCellContentPictureMaxH) {
                 pictureH = BSPostsCellContentPictureBreakH;
                 self.bigPicture = YES; // 大图
             }
-            
             // 图片内容视图的 frame
             self.contentPictureFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             
+            
             // 图片帖子 cell 的高度
             _cellHeight = _cellHeight +  pictureH + BSPostsCellMargin;
+            
+        }else if (self.type == BSPostsTypeVoice) { // 声音帖子
+            // frame
+            CGFloat voiceX = BSPostsCellMargin;
+            CGFloat voiceY = BSPostsCellContentTextY + contentTextH + BSPostsCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = self.height * voiceW / self.width;
+            self.contentVoiceFrame = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            
+            // cell 高度
+            _cellHeight = _cellHeight + voiceH + BSPostsCellMargin;
+            
+        }else if (self.type == BSPostsTypeVideo) { // 视频帖子
+            // frame
+            CGFloat videoX = BSPostsCellMargin;
+            CGFloat videoY = BSPostsCellContentTextY + contentTextH + BSPostsCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = self.height * videoW / self.width;
+            self.contentVideoFrame = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            // cell高度
+            _cellHeight = _cellHeight + videoH + BSPostsCellMargin;
+        }
+        
+        // 热门评论的 高度
+        BSComment *comment = [self.top_cmt firstObject];
+        if (comment) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", comment.content, comment.user.username];
+            CGFloat commentH = [content boundingRectWithSize:maxSize
+                                                     options:(NSStringDrawingUsesLineFragmentOrigin)
+                                                  attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]}
+                                                     context:nil].size.height;
+            CGFloat commentViewH = 17 + commentH;
+            _cellHeight = _cellHeight + commentViewH + BSPostsCellMargin;
         }
     }
     return _cellHeight;
 }
+
 
 /**
  *  设置创建时间的显示问题
